@@ -1,0 +1,1 @@
+﻿This is the readme for the speech to text project for Hackathon
