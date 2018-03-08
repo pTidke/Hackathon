@@ -11,15 +11,24 @@ namespace SpeechToText
     class speechtotext
     {
         string res = "";
-        public Rootobject parse(string json)
+        public static Rootobject parse(string json)
         {
             Rootobject root = new Rootobject();
             //Console.WriteLine(".........................");
             Newtonsoft.Json.JsonConvert.PopulateObject(json, root);
             return root;
         }
-
-        public string fromWaveFile(string path)
+        public static string GetSummaryFromJSON(string json)
+        {
+            Rootobject rootobject = speechtotext.parse(json);
+            string transcript = "";
+            for (int i = 0; i < rootobject.results.Length; i++)
+            {
+                transcript += rootobject.results[i].alternatives[0].transcript.ToString() + ". ";                
+            }
+            return transcript;
+        }
+        public static string fromWaveFile(string path)
         {
             using (var client = new HttpClient())
             {
@@ -33,6 +42,30 @@ namespace SpeechToText
 
                 var content = new StreamContent(new FileStream(path, FileMode.Open));
                 content.Headers.ContentType = new MediaTypeHeaderValue("audio/wav");
+                var response = client.PostAsync("https://stream.watsonplatform.net/speech-to-text/api/v1/recognize?interim_results=false&model=en-US_NarrowbandModel", content).Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    string res = response.Content.ReadAsStringAsync().Result;
+                    //Console.WriteLine(res);
+                }
+                string json = response.Content.ReadAsStringAsync().Result;
+                return json;
+            }
+        }
+        public static string fromMp3File(string path)
+        {
+            using (var client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(
+                    "Basic",
+                    Convert.ToBase64String(
+                        Encoding.ASCII.GetBytes(
+                           "b37a3344-f8ad-4817-ac8b-6e15635a1527:JyBxgO1QvWXw")));
+
+                var content = new StreamContent(new FileStream(path, FileMode.Open));
+                content.Headers.ContentType = new MediaTypeHeaderValue("audio/mp3");
                 var response = client.PostAsync("https://stream.watsonplatform.net/speech-to-text/api/v1/recognize?interim_results=false", content).Result;
                 if (response.IsSuccessStatusCode)
                 {

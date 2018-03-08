@@ -59,8 +59,9 @@ namespace SpeechToText
 
         private void button_upload_Click(object sender, EventArgs e)
         {
-            uplaodingPanel1.BringToFront();
-            uplaodingPanel1.Visible = true;
+            //loading the panel
+            summaryPanel1.BringToFront();
+            summaryPanel1.Visible = true;            
         }
 
         private void button3_Click(object sender, EventArgs e)

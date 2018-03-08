@@ -42,6 +42,7 @@
             this.bunifuCircleProgressbar_confidence = new Bunifu.Framework.UI.BunifuCircleProgressbar();
             this.bunifuCircleProgressbar_sad = new Bunifu.Framework.UI.BunifuCircleProgressbar();
             this.bunifuCircleProgressbar_anger = new Bunifu.Framework.UI.BunifuCircleProgressbar();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_happy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_anger)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_fear)).BeginInit();
@@ -137,6 +138,7 @@
             this.bunifuCircleProgressbar_happy.LineProgressThickness = 8;
             this.bunifuCircleProgressbar_happy.LineThickness = 5;
             this.bunifuCircleProgressbar_happy.Location = new System.Drawing.Point(921, 41);
+            this.bunifuCircleProgressbar_happy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuCircleProgressbar_happy.MaxValue = 100;
             this.bunifuCircleProgressbar_happy.Name = "bunifuCircleProgressbar_happy";
             this.bunifuCircleProgressbar_happy.ProgressBackColor = System.Drawing.Color.Gainsboro;
@@ -159,6 +161,7 @@
             this.bunifuCircleProgressbar_neutral.LineProgressThickness = 8;
             this.bunifuCircleProgressbar_neutral.LineThickness = 5;
             this.bunifuCircleProgressbar_neutral.Location = new System.Drawing.Point(921, 446);
+            this.bunifuCircleProgressbar_neutral.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuCircleProgressbar_neutral.MaxValue = 100;
             this.bunifuCircleProgressbar_neutral.Name = "bunifuCircleProgressbar_neutral";
             this.bunifuCircleProgressbar_neutral.ProgressBackColor = System.Drawing.Color.Gainsboro;
@@ -181,6 +184,7 @@
             this.bunifuCircleProgressbar_fear.LineProgressThickness = 8;
             this.bunifuCircleProgressbar_fear.LineThickness = 5;
             this.bunifuCircleProgressbar_fear.Location = new System.Drawing.Point(921, 365);
+            this.bunifuCircleProgressbar_fear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuCircleProgressbar_fear.MaxValue = 100;
             this.bunifuCircleProgressbar_fear.Name = "bunifuCircleProgressbar_fear";
             this.bunifuCircleProgressbar_fear.ProgressBackColor = System.Drawing.Color.Gainsboro;
@@ -203,6 +207,7 @@
             this.bunifuCircleProgressbar_confidence.LineProgressThickness = 8;
             this.bunifuCircleProgressbar_confidence.LineThickness = 5;
             this.bunifuCircleProgressbar_confidence.Location = new System.Drawing.Point(922, 284);
+            this.bunifuCircleProgressbar_confidence.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuCircleProgressbar_confidence.MaxValue = 100;
             this.bunifuCircleProgressbar_confidence.Name = "bunifuCircleProgressbar_confidence";
             this.bunifuCircleProgressbar_confidence.ProgressBackColor = System.Drawing.Color.Gainsboro;
@@ -225,6 +230,7 @@
             this.bunifuCircleProgressbar_sad.LineProgressThickness = 8;
             this.bunifuCircleProgressbar_sad.LineThickness = 5;
             this.bunifuCircleProgressbar_sad.Location = new System.Drawing.Point(921, 203);
+            this.bunifuCircleProgressbar_sad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuCircleProgressbar_sad.MaxValue = 100;
             this.bunifuCircleProgressbar_sad.Name = "bunifuCircleProgressbar_sad";
             this.bunifuCircleProgressbar_sad.ProgressBackColor = System.Drawing.Color.Gainsboro;
@@ -247,6 +253,7 @@
             this.bunifuCircleProgressbar_anger.LineProgressThickness = 8;
             this.bunifuCircleProgressbar_anger.LineThickness = 5;
             this.bunifuCircleProgressbar_anger.Location = new System.Drawing.Point(922, 122);
+            this.bunifuCircleProgressbar_anger.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuCircleProgressbar_anger.MaxValue = 100;
             this.bunifuCircleProgressbar_anger.Name = "bunifuCircleProgressbar_anger";
             this.bunifuCircleProgressbar_anger.ProgressBackColor = System.Drawing.Color.Gainsboro;
@@ -254,6 +261,10 @@
             this.bunifuCircleProgressbar_anger.Size = new System.Drawing.Size(75, 75);
             this.bunifuCircleProgressbar_anger.TabIndex = 14;
             this.bunifuCircleProgressbar_anger.Value = 0;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // SummaryPanel
             // 
@@ -275,6 +286,8 @@
             this.Controls.Add(this.richTextBox_summary);
             this.Name = "SummaryPanel";
             this.Size = new System.Drawing.Size(1000, 560);
+            this.Load += new System.EventHandler(this.SummaryPanel_Load);
+            this.VisibleChanged += new System.EventHandler(this.SummaryPanel_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_happy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_anger)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_fear)).EndInit();
@@ -300,5 +313,6 @@
         private Bunifu.Framework.UI.BunifuCircleProgressbar bunifuCircleProgressbar_confidence;
         private Bunifu.Framework.UI.BunifuCircleProgressbar bunifuCircleProgressbar_sad;
         private Bunifu.Framework.UI.BunifuCircleProgressbar bunifuCircleProgressbar_anger;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
