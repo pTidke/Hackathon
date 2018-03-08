@@ -50,7 +50,7 @@ namespace SpeechToText
                 try
                 {
                     //Thread.Sleep(500);
-                   // Console.WriteLine("reading from temp" + j.ToString());
+                    // Console.WriteLine("reading from temp" + j.ToString());
                     if (File.Exists(@"D:\temp" + j.ToString() + ".wav"))
                     {
                         Rootobject rootobject = new Rootobject();
@@ -64,6 +64,8 @@ namespace SpeechToText
                             Console.WriteLine(transcript);
                         }
                     }
+                    else
+                        return;
                 }
                 catch
                 {
@@ -98,6 +100,15 @@ namespace SpeechToText
         public static void stopTranscription()
         {
             recordingFlag = 0;
+            for (int i = 0;  ; i++)
+            {
+                if (File.Exists(@"D:\temp" + i.ToString() + ".wav"))
+                {
+                    File.Delete(@"D:\temp" + i.ToString() + ".wav");
+                }
+                else
+                    return;
+            }
         }
     }
 
