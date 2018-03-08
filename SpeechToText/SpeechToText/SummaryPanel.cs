@@ -60,11 +60,20 @@ namespace SpeechToText
                         else if (obj.document_tone.tones[i].tone_id == "fear")
                             bunifuCircleProgressbar_fear.Value = (int)(obj.document_tone.tones[i].score * 100);
                         else if (obj.document_tone.tones[i].tone_id == "disgust")
-                            bunifuCircleProgressbar_confidence.Value = (int)(obj.document_tone.tones[i].score * 100);
+                            bunifuCircleProgressbar_disgust.Value = (int)(obj.document_tone.tones[i].score * 100);
                         else if (obj.document_tone.tones[i].tone_id == "anger")
                             bunifuCircleProgressbar_anger.Value = (int)(obj.document_tone.tones[i].score * 100);
-                       
+                        
+                        else if (obj.document_tone.tones[i].tone_id == "confident")
+                            bunifuCircleProgressbar_confidence.Value = (int)(obj.document_tone.tones[i].score * 100);
                     }
+                    List<String> trans_data = translator.Translate("hi", outputText);
+                    string trans_output = string.Join(Environment.NewLine, trans_data.ToArray());
+
+                    UTF8Encoding utf8 = new UTF8Encoding();
+                    byte[] encodedBytes = utf8.GetBytes(trans_output);
+                    //MessageBox.Show(trans_output);
+                    //textBox1.Text = trans_output;
                 }
                 else
                 {
