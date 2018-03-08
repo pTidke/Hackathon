@@ -77,5 +77,24 @@ namespace SpeechToText
         {
             panel_language.Visible = !panel_language.Visible;
         }
+
+        private void panel4_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void button_hindiLanguage_Click(object sender, EventArgs e)
+        {
+            lang = "hi";
+        }
+
+        private void button_tamilLanguage_Click(object sender, EventArgs e)
+        {
+            lang = "ta";
+        }
+
+        private void button_teluguLanguage_Click(object sender, EventArgs e)
+        {
+            lang = "te";
+        }
     }
 }
