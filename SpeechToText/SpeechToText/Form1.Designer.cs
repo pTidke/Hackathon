@@ -39,9 +39,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.button_record = new System.Windows.Forms.Button();
+            this.label_listening = new System.Windows.Forms.Label();
             this.panelHeader.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuDragControl1
@@ -72,7 +74,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.button_record);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -82,6 +84,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(222)))), ((int)(((byte)(251)))));
+            this.panel3.Controls.Add(this.label_listening);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(94, 40);
             this.panel3.Name = "panel3";
@@ -140,16 +143,29 @@
             this.button4.TabIndex = 1;
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // button_record
             // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Image = global::SpeechToText.Properties.Resources.Mic;
-            this.button3.Location = new System.Drawing.Point(0, 335);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(91, 84);
-            this.button3.TabIndex = 0;
-            this.button3.UseVisualStyleBackColor = true;
+            this.button_record.FlatAppearance.BorderSize = 0;
+            this.button_record.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_record.Image = global::SpeechToText.Properties.Resources.Mic;
+            this.button_record.Location = new System.Drawing.Point(0, 335);
+            this.button_record.Name = "button_record";
+            this.button_record.Size = new System.Drawing.Size(91, 84);
+            this.button_record.TabIndex = 0;
+            this.button_record.UseVisualStyleBackColor = true;
+            this.button_record.Click += new System.EventHandler(this.button_record_Click);
+            // 
+            // label_listening
+            // 
+            this.label_listening.AutoSize = true;
+            this.label_listening.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_listening.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
+            this.label_listening.Location = new System.Drawing.Point(6, 527);
+            this.label_listening.Name = "label_listening";
+            this.label_listening.Size = new System.Drawing.Size(100, 24);
+            this.label_listening.TabIndex = 0;
+            this.label_listening.Text = "Listening...";
+            this.label_listening.Visible = false;
             // 
             // Form1
             // 
@@ -166,6 +182,8 @@
             this.Text = "Form1";
             this.panelHeader.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -178,9 +196,10 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button_record;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label_listening;
     }
 }
 
