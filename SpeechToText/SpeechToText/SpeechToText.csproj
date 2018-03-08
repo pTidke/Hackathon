@@ -75,10 +75,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="RecordingPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RecordingPanel.Designer.cs">
+      <DependentUpon>RecordingPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="SpeechToText.cs" />
+    <Compile Include="SummaryPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SummaryPanel.Designer.cs">
+      <DependentUpon>SummaryPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="ToneAnalyzerJSON.cs" />
     <Compile Include="ToneGenrator.cs" />
     <Compile Include="translator.cs" />
+    <Compile Include="UplaodingPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UplaodingPanel.Designer.cs">
+      <DependentUpon>UplaodingPanel.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -86,6 +104,15 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordingPanel.resx">
+      <DependentUpon>RecordingPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SummaryPanel.resx">
+      <DependentUpon>SummaryPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UplaodingPanel.resx">
+      <DependentUpon>UplaodingPanel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

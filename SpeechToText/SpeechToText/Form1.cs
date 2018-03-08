@@ -52,7 +52,20 @@ namespace SpeechToText
 
         private void button_record_Click(object sender, EventArgs e)
         {
-            label_listening.Visible = !label_listening.Visible;
+            //label_listening.Visible = !label_listening.Visible;
+            recordingPanel1.BringToFront();
+            recordingPanel1.Visible = true;
+        }
+
+        private void button_upload_Click(object sender, EventArgs e)
+        {
+            uplaodingPanel1.BringToFront();
+            uplaodingPanel1.Visible = true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            panel_language.Visible = !panel_language.Visible;
         }
     }
 }
