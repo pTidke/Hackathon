@@ -12,6 +12,7 @@ namespace SpeechToText
 {
     public partial class Form1 : Form
     {
+        public static string lang = "hi";
         public Form1()
         {
             InitializeComponent();

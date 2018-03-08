@@ -12,6 +12,7 @@ namespace SpeechToText
 {
     public partial class SummaryPanel : UserControl
     {
+        
         public SummaryPanel()
         {
             InitializeComponent();
@@ -67,7 +68,7 @@ namespace SpeechToText
                         else if (obj.document_tone.tones[i].tone_id == "confident")
                             bunifuCircleProgressbar_confidence.Value = (int)(obj.document_tone.tones[i].score * 100);
                     }
-                    List<String> trans_data = translator.Translate("hi", outputText);
+                    List<String> trans_data = translator.Translate(Form1.lang, outputText);
                     string trans_output = string.Join(Environment.NewLine, trans_data.ToArray());
 
                     UTF8Encoding utf8 = new UTF8Encoding();
