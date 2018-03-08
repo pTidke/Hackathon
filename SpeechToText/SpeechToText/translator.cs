@@ -9,17 +9,21 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
 
 /*
-Language Codes
+Language Codes to be given to method translate
 Hindi : hi
 English : en
 Tamil : ta
 Telugu : te
 Spanish : es
+
+    //string length should be 10240
 */
 namespace SpeechToText
 {
     class translator
     {
+        //api key for yendex technologies 
+
         public static string _apiKey = "trnsl.1.1.20180307T211340Z.c8ce0e240e55c0a2.d1bb1b162d6beb272f223d88d676f826ec613db1";
 
         public static List<string> Translate(string lang, string text)
