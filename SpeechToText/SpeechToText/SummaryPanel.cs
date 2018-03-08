@@ -42,7 +42,6 @@ namespace SpeechToText
                     outputText = speechtotext.GetSummaryFromJSON(outputText);
                     richTextBox_summary.Text = outputText;
                     //analysing the tone of the user
-                    
                 }
                 else
                 {

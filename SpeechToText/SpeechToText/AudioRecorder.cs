@@ -36,7 +36,11 @@ namespace SpeechToText
 
         protected virtual void OnBytesAccumulated(AudioBytesEventArgs e)
         {
-            BytesAccumulated?.Invoke(this, e);
+            //BytesAccumulated?.Invoke(this, e);
+            if(BytesAccumulated!=null)
+            {
+                BytesAccumulated.Invoke(this,e);
+            }
         }
                
         public void startRecording(string filePath)
@@ -75,9 +79,9 @@ namespace SpeechToText
         }
         MemoryStream stream;
 
-        public DirectSoundOut WaveOut { get => waveOut; set => waveOut = value; }
-        public DirectSoundOut WaveOut1 { get => waveOut; set => waveOut = value; }
-        public MemoryStream Stream { get => stream; set => stream = value; }
+        public DirectSoundOut WaveOut;
+        public DirectSoundOut WaveOut1;
+        public MemoryStream Stream;
 
         //this method invokes bytesAccumulated event after certain intervals of the input mic stream
         public void startRecordingByteStream(Stream stream)
