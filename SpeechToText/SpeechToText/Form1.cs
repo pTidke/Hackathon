@@ -49,5 +49,10 @@ namespace SpeechToText
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void button_record_Click(object sender, EventArgs e)
+        {
+            label_listening.Visible = !label_listening.Visible;
+        }
     }
 }
