@@ -45,8 +45,10 @@
             this.bunifuCircleProgressbar_anger = new Bunifu.Framework.UI.BunifuCircleProgressbar();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_translation = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_happy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_anger)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_fear)).BeginInit();
@@ -57,14 +59,15 @@
             // 
             // richTextBox_summary
             // 
+            this.richTextBox_summary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
             this.richTextBox_summary.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox_summary.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.richTextBox_summary.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox_summary.Location = new System.Drawing.Point(25, 25);
+            this.richTextBox_summary.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.richTextBox_summary.Location = new System.Drawing.Point(35, 35);
             this.richTextBox_summary.Name = "richTextBox_summary";
             this.richTextBox_summary.ReadOnly = true;
-            this.richTextBox_summary.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal;
-            this.richTextBox_summary.Size = new System.Drawing.Size(800, 230);
+            this.richTextBox_summary.Size = new System.Drawing.Size(780, 210);
             this.richTextBox_summary.TabIndex = 0;
             this.richTextBox_summary.Text = "";
             // 
@@ -270,28 +273,45 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // richTextBox1
+            // richTextBox_translation
             // 
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(25, 300);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal;
-            this.richTextBox1.Size = new System.Drawing.Size(800, 230);
-            this.richTextBox1.TabIndex = 15;
-            this.richTextBox1.Text = "";
+            this.richTextBox_translation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
+            this.richTextBox_translation.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_translation.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.richTextBox_translation.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox_translation.Location = new System.Drawing.Point(35, 310);
+            this.richTextBox_translation.Name = "richTextBox_translation";
+            this.richTextBox_translation.ReadOnly = true;
+            this.richTextBox_translation.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal;
+            this.richTextBox_translation.Size = new System.Drawing.Size(780, 210);
+            this.richTextBox_translation.TabIndex = 15;
+            this.richTextBox_translation.Text = "";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 275);
+            this.label1.Location = new System.Drawing.Point(20, 270);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(140, 22);
             this.label1.TabIndex = 16;
             this.label1.Text = "Translation :";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
+            this.panel1.Location = new System.Drawing.Point(25, 25);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 230);
+            this.panel1.TabIndex = 17;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
+            this.panel2.Location = new System.Drawing.Point(25, 300);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 230);
+            this.panel2.TabIndex = 18;
             // 
             // SummaryPanel
             // 
@@ -299,7 +319,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(222)))), ((int)(((byte)(251)))));
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.richTextBox_translation);
             this.Controls.Add(this.bunifuCircleProgressbar_anger);
             this.Controls.Add(this.bunifuCircleProgressbar_sad);
             this.Controls.Add(this.bunifuCircleProgressbar_disgust);
@@ -313,6 +333,8 @@
             this.Controls.Add(this.pictureBox_anger);
             this.Controls.Add(this.pictureBox_happy);
             this.Controls.Add(this.richTextBox_summary);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Name = "SummaryPanel";
             this.Size = new System.Drawing.Size(1000, 560);
             this.Load += new System.EventHandler(this.SummaryPanel_Load);
@@ -345,7 +367,9 @@
         private Bunifu.Framework.UI.BunifuCircleProgressbar bunifuCircleProgressbar_anger;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox richTextBox_translation;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
