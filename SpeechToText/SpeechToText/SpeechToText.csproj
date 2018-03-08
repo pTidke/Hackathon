@@ -112,7 +112,6 @@
     <None Include="Resources\logo.png" />
     <None Include="Resources\minimize.png" />
     <None Include="Resources\close.png" />
-    <None Include="Resources\icons8_Translation_50px.png" />
     <None Include="Resources\Settings.png" />
     <None Include="Resources\Upload.png" />
     <None Include="Resources\Mic.png" />
