@@ -74,6 +74,7 @@ namespace SpeechToText
                     byte[] encodedBytes = utf8.GetBytes(trans_output);
                     //MessageBox.Show(trans_output);
                     //textBox1.Text = trans_output;
+                    textBox_translation.Text = trans_output;
                 }
                 else
                 {
