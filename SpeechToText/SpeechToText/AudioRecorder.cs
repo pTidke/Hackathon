@@ -53,7 +53,9 @@ namespace SpeechToText
         private void WaveInEvent_DataAvailable(object sender, WaveInEventArgs e)
         {
             if (wavWriter == null) return;
-            wavWriter.WriteData(e.Buffer, 0, e.BytesRecorded);           
+#pragma warning disable CS0618 // Type or member is obsolete
+            wavWriter.WriteData(e.Buffer, 0, e.BytesRecorded);
+#pragma warning restore CS0618 // Type or member is obsolete
             wavWriter.Flush();
         }
 
@@ -72,6 +74,11 @@ namespace SpeechToText
             }
         }
         MemoryStream stream;
+
+        public DirectSoundOut WaveOut { get => waveOut; set => waveOut = value; }
+        public DirectSoundOut WaveOut1 { get => waveOut; set => waveOut = value; }
+        public MemoryStream Stream { get => stream; set => stream = value; }
+
         //this method invokes bytesAccumulated event after certain intervals of the input mic stream
         public void startRecordingByteStream(Stream stream)
         {
@@ -86,7 +93,9 @@ namespace SpeechToText
 
         private void WaveInEvent_DataToBytes(object sender, WaveInEventArgs e)
         {
+#pragma warning disable CS0618 // Type or member is obsolete
             wavWriter.WriteData(e.Buffer, 0, e.BytesRecorded);
+#pragma warning restore CS0618 // Type or member is obsolete
             wavWriter.Flush();
             //byte[] buffer;    
             //stream.

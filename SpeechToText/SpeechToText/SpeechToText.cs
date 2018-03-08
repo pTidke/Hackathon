@@ -72,6 +72,9 @@ namespace SpeechToText
             }
         }
         static int recordingFlag = 0;
+
+        public string Res { get => res; set => res = value; }
+
         public static void recordInChunks()
         {
             for (int i = 0; recordingFlag!=0; i++)
