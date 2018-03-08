@@ -82,7 +82,7 @@ namespace SpeechToText
                 string filename = @"D:/temp" + i.ToString() + ".wav";
                 AudioRecorder recorder = new AudioRecorder();
                 recorder.startRecording(filename);
-                System.Threading.Thread.Sleep(4500);
+                System.Threading.Thread.Sleep(5000);
                 //Console.WriteLine("Press any key to split");
                 //Console.ReadKey();
                 recorder.stopRecording();
@@ -94,7 +94,7 @@ namespace SpeechToText
             Thread recorderThread = new Thread(new ThreadStart(recordInChunks));            
             Thread responseThread = new Thread(new ThreadStart(GetResponses));
             recorderThread.Start();
-            Thread.Sleep(5000);
+            Thread.Sleep(5300);
             responseThread.Start();
         }
         public static void stopTranscription()

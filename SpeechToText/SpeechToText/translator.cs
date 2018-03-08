@@ -8,6 +8,14 @@ using System.Net;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
 
+/*
+Language Codes
+Hindi : hi
+English : en
+Tamil : ta
+Telugu : te
+Spanish : es
+*/
 namespace SpeechToText
 {
     class translator
