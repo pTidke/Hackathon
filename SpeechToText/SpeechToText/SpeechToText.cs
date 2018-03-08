@@ -88,7 +88,7 @@ namespace SpeechToText
                 recorder.stopRecording();
             }
         }
-        public static void Transcribe()
+        public static void StartTranscribe()
         {
             recordingFlag = 1;
             Thread recorderThread = new Thread(new ThreadStart(recordInChunks));            
@@ -96,6 +96,10 @@ namespace SpeechToText
             recorderThread.Start();
             Thread.Sleep(5000);
             responseThread.Start();
+        }
+        public static void stopTranscription()
+        {
+            recordingFlag = 0;
         }
     }
 
