@@ -117,4 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="bunifuDragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="button2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAABGdBTUEAALGPC/xhBQAAAENJREFUWEft
+        0DEKADAIQ1HBu7Sn7+jROrcWvIDgIOU/yJgMEQAAgJ8N1TVVd1XeXkznedk8pzAW03le7vMMAABAeyIX
+        X15GZJWJhKYAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="button1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAABGdBTUEAALGPC/xhBQAAATlJREFUWEft
+        l01ywjAMRkOiHCVhy4per/+79gBAT9N9u+0JWHMD+imWpgoJQ5XULgu/QZOxFCkP42GgyGQyKWjqetUS
+        3cpyFphzx/Nk6QONN21VHRBHxAapRai4Kblf5hzaul5L/vfgnTzLgBBEL1Jygb7XkzlPUvLBjb1BYYfK
+        UL2I3ZEulkSPUpvGRCEW2dq+2SKKUyieiMID7QMQY0LxRZQRoS3SKpRORDkjRHy1+egiykCI6MuuUX+Q
+        W9MwskP/IyKU2JHPngzRB+dDOR18WHc9kZ+whzo6AxF8NO92jUgiNCbSnRG+2jxix/dzLQYDkYboXmod
+        qYQuiiixhcqmqt7sA86JKLGE3CIK32f7ELOEJosofyaEL7Dr+aW3xAvNex7g3ZFTzA7tea6kfVzNv4NM
+        JuOiKL4Bx3LECul/XBMAAAAASUVORK5CYII=
+</value>
+  </data>
+  <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>177, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>37</value>
+  </metadata>
 </root>
