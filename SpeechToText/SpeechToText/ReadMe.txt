@@ -1,2 +1,2 @@
-﻿This is the readme for the speech to text project for Hackathon.....
-this is mohit.
+﻿The UI is Completed.
+Backend is Awaited.
