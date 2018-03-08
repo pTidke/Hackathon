@@ -16,7 +16,7 @@ namespace SpeechToText
         {
             Newtonsoft.Json.JsonConvert.PopulateObject(getResponse(inputText), JSON);
         }
-        private static string getResponse(string inputText)
+        public static string getResponse(string inputText)
         {
             using (var client = new HttpClient())
             {
