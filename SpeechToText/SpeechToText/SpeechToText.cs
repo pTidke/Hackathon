@@ -60,10 +60,8 @@ namespace SpeechToText
 
                         for (int i = 0; i < rootobject.results.Length; i++)
                         {
-                            //Console.WriteLine(rootobject.results[i].final);
-                            Console.WriteLine(rootobject.results[i].alternatives[0].transcript.ToString());
-
-
+                            string transcript = rootobject.results[i].alternatives[0].transcript.ToString();
+                            Console.WriteLine(transcript);
                         }
                     }
                 }
