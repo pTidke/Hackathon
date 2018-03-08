@@ -108,6 +108,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="ReadMe.txt" />
+    <None Include="Resources\icons8_Translation_50px.png" />
     <None Include="Resources\Settings.png" />
     <None Include="Resources\Upload.png" />
     <None Include="Resources\Mic.png" />
