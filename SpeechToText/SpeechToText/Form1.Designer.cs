@@ -45,10 +45,11 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.button_record = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label_listening = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.uplaodingPanel1 = new SpeechToText.UplaodingPanel();
             this.summaryPanel1 = new SpeechToText.SummaryPanel();
             this.recordingPanel1 = new SpeechToText.RecordingPanel();
-            this.label_listening = new System.Windows.Forms.Label();
             this.panelHeader.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel_language.SuspendLayout();
@@ -233,6 +234,18 @@
             this.panel3.Size = new System.Drawing.Size(1000, 560);
             this.panel3.TabIndex = 2;
             // 
+            // label_listening
+            // 
+            this.label_listening.AutoSize = true;
+            this.label_listening.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_listening.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
+            this.label_listening.Location = new System.Drawing.Point(6, 527);
+            this.label_listening.Name = "label_listening";
+            this.label_listening.Size = new System.Drawing.Size(100, 24);
+            this.label_listening.TabIndex = 0;
+            this.label_listening.Text = "Listening...";
+            this.label_listening.Visible = false;
+            // 
             // uplaodingPanel1
             // 
             this.uplaodingPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(222)))), ((int)(((byte)(251)))));
@@ -263,18 +276,6 @@
             this.recordingPanel1.Size = new System.Drawing.Size(1000, 560);
             this.recordingPanel1.TabIndex = 1;
             this.recordingPanel1.Visible = false;
-            // 
-            // label_listening
-            // 
-            this.label_listening.AutoSize = true;
-            this.label_listening.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_listening.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
-            this.label_listening.Location = new System.Drawing.Point(6, 527);
-            this.label_listening.Name = "label_listening";
-            this.label_listening.Size = new System.Drawing.Size(100, 24);
-            this.label_listening.TabIndex = 0;
-            this.label_listening.Text = "Listening...";
-            this.label_listening.Visible = false;
             // 
             // Form1
             // 
@@ -318,6 +319,7 @@
         private System.Windows.Forms.Button button_teluguLanguage;
         private System.Windows.Forms.Button button_tamilLanguage;
         private System.Windows.Forms.Button button_hindiLanguage;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 

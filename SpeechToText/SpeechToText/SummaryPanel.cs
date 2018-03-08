@@ -15,6 +15,12 @@ namespace SpeechToText
         public SummaryPanel()
         {
             InitializeComponent();
+            toolTip1.SetToolTip(pictureBox_anger , "Anger");
+            toolTip1.SetToolTip(pictureBox_confidence , "Confidence");
+            toolTip1.SetToolTip(pictureBox_disgust, "Disgust");
+            toolTip1.SetToolTip(pictureBox_fear, "Fear");
+            toolTip1.SetToolTip(pictureBox_happy, "Happy");
+            toolTip1.SetToolTip(pictureBox_sad, "Sad");
         }
 
         private void SummaryPanel_Load(object sender, EventArgs e)
@@ -54,7 +60,7 @@ namespace SpeechToText
                         else if (obj.document_tone.tones[i].tone_id == "fear")
                             bunifuCircleProgressbar_fear.Value = (int)(obj.document_tone.tones[i].score * 100);
                         else if (obj.document_tone.tones[i].tone_id == "disgust")
-                            bunifuCircleProgressbar_neutral.Value = (int)(obj.document_tone.tones[i].score * 100);
+                            bunifuCircleProgressbar_confidence.Value = (int)(obj.document_tone.tones[i].score * 100);
                         else if (obj.document_tone.tones[i].tone_id == "anger")
                             bunifuCircleProgressbar_anger.Value = (int)(obj.document_tone.tones[i].score * 100);
                        

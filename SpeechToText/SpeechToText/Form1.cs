@@ -16,6 +16,14 @@ namespace SpeechToText
         {
             InitializeComponent();
             this.SetStyle(ControlStyles.ResizeRedraw, true);
+            toolTip1.SetToolTip(button_record , "Record Audio");
+            toolTip1.SetToolTip(button_upload , "Attach Audio");
+            toolTip1.SetToolTip(button_language, "Change Language");
+            toolTip1.SetToolTip(button_hindiLanguage, "Hindi");
+            toolTip1.SetToolTip(button_tamilLanguage, "Tamil");
+            toolTip1.SetToolTip(button_teluguLanguage, "Telugu");
+            toolTip1.SetToolTip(button, "Close Application");
+            toolTip1.SetToolTip(button2, "Minimize Application");
         }
         private const int cGrip = 16;
         private const int cCaption = 32;
