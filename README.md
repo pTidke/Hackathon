@@ -26,6 +26,6 @@ How to use JARVIS
 Conclusion
 JARVIS is capable to record or upload audio , then trancribing it to generate closed caption subtitles of spoken words in various Indian Languages.
 
-![alt text]()
-![alt text]()
-![alt text]()
+![alt text](https://github.com/pTidke/Hackathon/blob/master/Capture%201.PNG?raw=true)
+![alt text](https://github.com/pTidke/Hackathon/blob/master/Capture%203.PNG?raw=true)
+![alt text](https://github.com/pTidke/Hackathon/blob/master/Screenshot%20(1).png?raw=true)
