@@ -68,14 +68,7 @@ namespace SpeechToText
                         else if (obj.document_tone.tones[i].tone_id == "confident")
                             bunifuCircleProgressbar_confidence.Value = (int)(obj.document_tone.tones[i].score * 100);
                     }
-                    List<String> trans_data = translator.Translate(Form1.lang, outputText);
-                    string trans_output = string.Join(Environment.NewLine, trans_data.ToArray());
-
-                    UTF8Encoding utf8 = new UTF8Encoding();
-                    byte[] encodedBytes = utf8.GetBytes(trans_output);
-                    //MessageBox.Show(trans_output);
-                    //textBox1.Text = trans_output;
-                    textBox_translation.Text = trans_output;
+                    Form1.outputText = outputText;
                 }
                 else
                 {

@@ -12,6 +12,7 @@ namespace SpeechToText
 {
     public partial class Form1 : Form
     {
+        public static string outputText = "";
         public static string lang = "hi";
         public Form1()
         {
@@ -81,20 +82,36 @@ namespace SpeechToText
         private void panel4_Click(object sender, EventArgs e)
         {
         }
+        private void setSummaryTranslation()
+        {
+            if (outputText != null && outputText != "")
+            {
+                List<String> trans_data = translator.Translate(lang, outputText);
+                string trans_output = string.Join(Environment.NewLine, trans_data.ToArray());
 
+                UTF8Encoding utf8 = new UTF8Encoding();
+                byte[] encodedBytes = utf8.GetBytes(trans_output);
+                //MessageBox.Show(trans_output);
+                //textBox1.Text = trans_output;
+                summaryPanel1.textBox_translation.Text = trans_output;
+            }
+        }
         private void button_hindiLanguage_Click(object sender, EventArgs e)
         {
             lang = "hi";
+            setSummaryTranslation();
         }
 
         private void button_tamilLanguage_Click(object sender, EventArgs e)
         {
             lang = "ta";
+            setSummaryTranslation();
         }
 
         private void button_teluguLanguage_Click(object sender, EventArgs e)
         {
             lang = "te";
+            setSummaryTranslation();
         }
     }
 }
