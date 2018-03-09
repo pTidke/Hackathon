@@ -30,6 +30,8 @@ namespace SpeechToText
             toolTip1.SetToolTip(button, "Close Application");
             toolTip1.SetToolTip(button2, "Minimize Application");
             recordingPanel1.TranscriptionStopped += RecordingPanel1_TranscriptionStopped;
+            uplaodingPanel1.Visible = false;
+            panel3.Visible = true;
         }
 
         public static string summaryCaller = "none";
@@ -144,6 +146,11 @@ namespace SpeechToText
             label2.Text = "TEL";
             panel_language.Visible = !panel_language.Visible;
             label2.ForeColor = Color.White;            
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            uplaodingPanel1.Visible = !uplaodingPanel1.Visible;
         }
     }
 }

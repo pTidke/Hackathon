@@ -51,6 +51,7 @@
             this.recordingPanel1 = new SpeechToText.RecordingPanel();
             this.uplaodingPanel1 = new SpeechToText.UplaodingPanel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.panelHeader.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel_language.SuspendLayout();
@@ -67,6 +68,7 @@
             // panelHeader
             // 
             this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(101)))), ((int)(((byte)(192)))));
+            this.panelHeader.Controls.Add(this.button1);
             this.panelHeader.Controls.Add(this.button2);
             this.panelHeader.Controls.Add(this.button);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
@@ -240,8 +242,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(222)))), ((int)(((byte)(251)))));
-            this.panel3.Controls.Add(this.summaryPanel1);
             this.panel3.Controls.Add(this.label_listening);
+            this.panel3.Controls.Add(this.summaryPanel1);
             this.panel3.Controls.Add(this.recordingPanel1);
             this.panel3.Controls.Add(this.uplaodingPanel1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -293,6 +295,20 @@
             this.uplaodingPanel1.TabIndex = 3;
             this.uplaodingPanel1.Visible = false;
             // 
+            // button1
+            // 
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(880, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(40, 40);
+            this.button1.TabIndex = 2;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -338,6 +354,7 @@
         private System.Windows.Forms.Button button_hindiLanguage;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
     }
 }
 
