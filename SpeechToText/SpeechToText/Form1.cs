@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace SpeechToText
@@ -13,7 +14,8 @@ namespace SpeechToText
     public partial class Form1 : Form
     {
         public static string outputText = "";
-        public static string lang = "hi";
+        public static string lang = "none";
+        public static bool isTranscribing = false;
         public Form1()
         {
             InitializeComponent();
@@ -63,6 +65,7 @@ namespace SpeechToText
         private void button_record_Click(object sender, EventArgs e)
         {
             //label_listening.Visible = !label_listening.Visible;
+            isTranscribing = true;
             recordingPanel1.BringToFront();
             recordingPanel1.Visible = true;
         }
@@ -123,8 +126,7 @@ namespace SpeechToText
             setSummaryTranslation();
             label2.Text = "TEL";
             panel_language.Visible = !panel_language.Visible;
-            label2.ForeColor = Color.White;
-            
+            label2.ForeColor = Color.White;            
         }
     }
 }

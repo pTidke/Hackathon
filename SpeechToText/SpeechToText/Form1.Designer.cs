@@ -329,9 +329,9 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button button_upload;
         private System.Windows.Forms.Button button_language;
-        public RecordingPanel recordingPanel1{ get; set; }
-    public UplaodingPanel uplaodingPanel1{ get; set; }
-    public SummaryPanel summaryPanel1 { get; set; }
+        public RecordingPanel recordingPanel1;
+        public UplaodingPanel uplaodingPanel1;
+        public SummaryPanel summaryPanel1;
         private System.Windows.Forms.Panel panel_language;
         private System.Windows.Forms.Button button_teluguLanguage;
         private System.Windows.Forms.Button button_tamilLanguage;

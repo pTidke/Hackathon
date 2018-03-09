@@ -158,7 +158,11 @@ namespace SpeechToText
             {
                 if (File.Exists(@"D:\temp" + i.ToString() + ".wav"))
                 {
-                    File.Delete(@"D:\temp" + i.ToString() + ".wav");
+                    try
+                    {
+                        File.Delete(@"D:\temp" + i.ToString() + ".wav");
+                    }
+                    catch { }
                 }
                 else
                     return;
