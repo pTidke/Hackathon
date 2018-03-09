@@ -83,6 +83,8 @@ namespace SpeechToText
         }
         private void SummaryPanel_VisibleChanged(object sender, EventArgs e)
         {
+            textBox_translation.Text = "";
+            richTextBox1.Text = "";
             if(Form1.summaryCaller=="uploadPanel")
             {
                 uploadAction();
