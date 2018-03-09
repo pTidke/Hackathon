@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecordingPanel));
             this.textBox_FinalResponse = new System.Windows.Forms.TextBox();
             this.textBox_interimResponse = new System.Windows.Forms.TextBox();
             this.label_listening = new System.Windows.Forms.Label();
@@ -94,8 +93,9 @@
             this.button_startStopToggle.BackColor = System.Drawing.Color.Transparent;
             this.button_startStopToggle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button_startStopToggle.FlatAppearance.BorderSize = 0;
+            this.button_startStopToggle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
             this.button_startStopToggle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_startStopToggle.Image = ((System.Drawing.Image)(resources.GetObject("button_startStopToggle.Image")));
+            this.button_startStopToggle.Image = global::SpeechToText.Properties.Resources.micOn;
             this.button_startStopToggle.Location = new System.Drawing.Point(454, 473);
             this.button_startStopToggle.Name = "button_startStopToggle";
             this.button_startStopToggle.Size = new System.Drawing.Size(40, 40);

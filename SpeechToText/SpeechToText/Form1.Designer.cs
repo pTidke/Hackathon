@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panelHeader = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button = new System.Windows.Forms.Button();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -46,12 +47,11 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.button_record = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.summaryPanel1 = new SpeechToText.SummaryPanel();
             this.label_listening = new System.Windows.Forms.Label();
+            this.summaryPanel1 = new SpeechToText.SummaryPanel();
             this.recordingPanel1 = new SpeechToText.RecordingPanel();
             this.uplaodingPanel1 = new SpeechToText.UplaodingPanel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.panelHeader.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel_language.SuspendLayout();
@@ -76,6 +76,20 @@
             this.panelHeader.Name = "panelHeader";
             this.panelHeader.Size = new System.Drawing.Size(1000, 40);
             this.panelHeader.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(880, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(40, 40);
+            this.button1.TabIndex = 2;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button2
             // 
@@ -252,16 +266,6 @@
             this.panel3.Size = new System.Drawing.Size(1000, 560);
             this.panel3.TabIndex = 2;
             // 
-            // summaryPanel1
-            // 
-            this.summaryPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(222)))), ((int)(((byte)(251)))));
-            this.summaryPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.summaryPanel1.Location = new System.Drawing.Point(0, 0);
-            this.summaryPanel1.Name = "summaryPanel1";
-            this.summaryPanel1.Size = new System.Drawing.Size(1000, 560);
-            this.summaryPanel1.TabIndex = 2;
-            this.summaryPanel1.Visible = false;
-            // 
             // label_listening
             // 
             this.label_listening.AutoSize = true;
@@ -273,6 +277,16 @@
             this.label_listening.TabIndex = 0;
             this.label_listening.Text = "Listening...";
             this.label_listening.Visible = false;
+            // 
+            // summaryPanel1
+            // 
+            this.summaryPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(222)))), ((int)(((byte)(251)))));
+            this.summaryPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.summaryPanel1.Location = new System.Drawing.Point(0, 0);
+            this.summaryPanel1.Name = "summaryPanel1";
+            this.summaryPanel1.Size = new System.Drawing.Size(1000, 560);
+            this.summaryPanel1.TabIndex = 2;
+            this.summaryPanel1.Visible = false;
             // 
             // recordingPanel1
             // 
@@ -294,20 +308,6 @@
             this.uplaodingPanel1.Size = new System.Drawing.Size(1000, 560);
             this.uplaodingPanel1.TabIndex = 3;
             this.uplaodingPanel1.Visible = false;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(880, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 40);
-            this.button1.TabIndex = 2;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Form1
             // 
