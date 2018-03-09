@@ -41,7 +41,7 @@ namespace SpeechToText
             string transcript = "";
             for (int i = 0; i < rootobject.results.Length; i++)
             {
-                transcript += rootobject.results[i].alternatives[0].transcript.ToString() + "";                
+                transcript += rootobject.results[i].alternatives[0].transcript.ToString() + ".";                
             }
             return transcript;
         }
