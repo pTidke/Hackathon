@@ -69,6 +69,30 @@ namespace SpeechToText
                 return json;
             }
         }
+        public static string fromflacFile(string path)
+        {
+            using (var client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(
+                    "Basic",
+                    Convert.ToBase64String(
+                        Encoding.ASCII.GetBytes(
+                           "c3c96c75-0fec-4020-a1af-59857ab28bdc:qXlbSWgM2J5T")));
+
+                var content = new StreamContent(new FileStream(path, FileMode.Open));
+                content.Headers.ContentType = new MediaTypeHeaderValue("audio/flac");
+                var response = client.PostAsync("https://stream.watsonplatform.net/speech-to-text/api/v1/recognize?interim_results=false&model=en-US_NarrowbandModel", content).Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    string res = response.Content.ReadAsStringAsync().Result;
+                    //Console.WriteLine(res);
+                }
+                string json = response.Content.ReadAsStringAsync().Result;
+                return json;
+            }
+        }
         public static string fromMp3File(string path)
         {
             using (var client = new HttpClient())

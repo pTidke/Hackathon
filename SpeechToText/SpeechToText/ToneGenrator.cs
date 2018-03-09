@@ -43,10 +43,6 @@ namespace SpeechToText
                 }
                 return outputText;
 
-            }
-
-
-
-        }
+            }        }
     }
 }

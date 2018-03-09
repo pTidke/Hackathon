@@ -42,8 +42,10 @@ namespace SpeechToText
                 //requesting response from server
                 if (filePath.Substring(filePath.Length - 3) == "wav")
                     outputText = speechtotext.fromWaveFile(filePath);
-                else
+                else if (filePath.Substring(filePath.Length - 3) == "mp3")
                     outputText = speechtotext.fromMp3File(filePath);
+                else
+                    outputText = speechtotext.fromflacFile(filePath);
                 //parsing the json file and showing in textbox
                 outputText = speechtotext.GetSummaryFromJSON(outputText);
                 richTextBox_summary.Text = outputText;
