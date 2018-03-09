@@ -26,7 +26,7 @@ namespace SpeechToText
                     "Basic",
                     Convert.ToBase64String(
                         Encoding.ASCII.GetBytes(
-                           "7b2eef75-8343-4673-93c3-212ddce4a2ca:bIsSOKeHRphJ")));
+                           "bd155088-3404-4d54-b980-258b35a6a360:74Nei3KtGs1h")));
                 //creating stream from string
                 var stream = new MemoryStream();
                 var writer = new StreamWriter(stream);

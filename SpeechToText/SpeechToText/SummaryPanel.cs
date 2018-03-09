@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace SpeechToText
 {
@@ -31,6 +32,7 @@ namespace SpeechToText
         public void uploadAction()
         {
             //uploading audio file
+            openFileDialog1.Title = "Choose Audio file";
             openFileDialog1.Filter = "Wave audio (*.wav)|*.wav|Mp3 audio (*.mp3)|*.mp3";
             string filePath;
             string outputText;
@@ -89,6 +91,26 @@ namespace SpeechToText
             {
                 richTextBox_summary.Text = Form1.outputText;
                 ToneSetter(Form1.outputText);
+            }
+        }
+
+        private void button_saveToFile_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.Title = "Save Transcript";
+            saveFileDialog1.Filter = "Text file (*.txt)|*.txt";
+            string filePath;
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                filePath = saveFileDialog1.FileName;
+                using (StreamWriter file = new StreamWriter(filePath))
+                {
+                    file.WriteLine(Form1.outputText);
+                    file.WriteLine();
+                    file.WriteLine("Translation :");
+                    file.WriteLine(textBox_translation.Text);
+                }
+                
             }
         }
     }

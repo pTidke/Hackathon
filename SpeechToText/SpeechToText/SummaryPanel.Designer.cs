@@ -50,6 +50,8 @@
             this.textBox_translation = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button_saveToFile = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_happy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_anger)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_fear)).BeginInit();
@@ -323,11 +325,22 @@
             this.panel2.Size = new System.Drawing.Size(800, 230);
             this.panel2.TabIndex = 19;
             // 
+            // button_saveToFile
+            // 
+            this.button_saveToFile.Location = new System.Drawing.Point(765, 271);
+            this.button_saveToFile.Name = "button_saveToFile";
+            this.button_saveToFile.Size = new System.Drawing.Size(60, 23);
+            this.button_saveToFile.TabIndex = 20;
+            this.button_saveToFile.Text = "Save";
+            this.button_saveToFile.UseVisualStyleBackColor = true;
+            this.button_saveToFile.Click += new System.EventHandler(this.button_saveToFile_Click);
+            // 
             // SummaryPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(222)))), ((int)(((byte)(251)))));
+            this.Controls.Add(this.button_saveToFile);
             this.Controls.Add(this.textBox_translation);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.richTextBox1);
@@ -383,5 +396,7 @@
         public System.Windows.Forms.TextBox textBox_translation;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button_saveToFile;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
