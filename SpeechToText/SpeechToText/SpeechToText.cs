@@ -55,7 +55,7 @@ namespace SpeechToText
                     "Basic",
                     Convert.ToBase64String(
                         Encoding.ASCII.GetBytes(
-                           "b37a3344-f8ad-4817-ac8b-6e15635a1527:JyBxgO1QvWXw")));
+                           "c3c96c75-0fec-4020-a1af-59857ab28bdc:qXlbSWgM2J5T")));
 
                 var content = new StreamContent(new FileStream(path, FileMode.Open));
                 content.Headers.ContentType = new MediaTypeHeaderValue("audio/wav");
