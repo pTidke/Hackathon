@@ -117,6 +117,7 @@ namespace SpeechToText
                 return json;
             }
         }
+        string tempPath = Path.GetTempPath();
         public void GetResponses()
         {            
             for (int j = 0; ; j++)
@@ -125,11 +126,11 @@ namespace SpeechToText
                 {
                     //Thread.Sleep(500);
                     // Console.WriteLine("reading from temp" + j.ToString());
-                    if (File.Exists(@"D:\temp" + j.ToString() + ".wav"))
+                    if (File.Exists(tempPath+"temp" + j.ToString() + ".wav"))
                     {
                         Rootobject rootobject = new Rootobject();
                         speechtotext speechtotext = new speechtotext();
-                        string json = speechtotext.fromWaveFile(@"D:\temp" + j.ToString() + ".wav");
+                        string json = speechtotext.fromWaveFile(tempPath + "temp" + j.ToString() + ".wav");
                         rootobject = speechtotext.parse(json);
 
                         for (int i = 0; i < rootobject.results.Length; i++)
@@ -157,7 +158,7 @@ namespace SpeechToText
             for (int i = 0; recordingFlag!=0; i++)
             {
                 //Console.WriteLine("writing on temp" + i.ToString());
-                string filename = @"D:/temp" + i.ToString() + ".wav";
+                string filename = tempPath + "temp" + i.ToString() + ".wav";
                 AudioRecorder recorder = new AudioRecorder();
                 recorder.startRecording(filename);
                 System.Threading.Thread.Sleep(5000);
@@ -180,11 +181,11 @@ namespace SpeechToText
             recordingFlag = 0;
             for (int i = 0;  ; i++)
             {
-                if (File.Exists(@"D:\temp" + i.ToString() + ".wav"))
+                if (File.Exists(tempPath + "temp" + i.ToString() + ".wav"))
                 {
                     try
                     {
-                        File.Delete(@"D:\temp" + i.ToString() + ".wav");
+                        File.Delete(tempPath + "temp" + i.ToString() + ".wav");
                     }
                     catch { }
                 }

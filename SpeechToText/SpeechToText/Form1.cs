@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using System.Windows.Forms;
+using System.IO;
 
 namespace SpeechToText
 {
@@ -79,6 +80,7 @@ namespace SpeechToText
             //label_listening.Visible = !label_listening.Visible;
             isTranscribing = true;
             outputText = "";
+            //MessageBox.Show(Path.GetTempPath());
             recordingPanel1.Visible = false;
             recordingPanel1.BringToFront();           
             recordingPanel1.Visible = true;
