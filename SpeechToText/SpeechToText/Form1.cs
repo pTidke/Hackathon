@@ -85,16 +85,25 @@ namespace SpeechToText
         private void button_hindiLanguage_Click(object sender, EventArgs e)
         {
             lang = "hi";
+            label2.Text = "HIN";
+            panel_language.Visible = !panel_language.Visible;
+            label2.ForeColor = Color.White;
         }
 
         private void button_tamilLanguage_Click(object sender, EventArgs e)
         {
             lang = "ta";
+            label2.Text = "TAM";
+            panel_language.Visible = !panel_language.Visible;
+            label2.ForeColor = Color.White;
         }
 
         private void button_teluguLanguage_Click(object sender, EventArgs e)
         {
             lang = "te";
+            label2.Text = "TEL";
+            panel_language.Visible = !panel_language.Visible;
+            label2.ForeColor = Color.White;
         }
     }
 }
