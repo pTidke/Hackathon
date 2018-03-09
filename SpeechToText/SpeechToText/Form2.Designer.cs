@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.label1 = new System.Windows.Forms.Label();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
@@ -37,8 +36,6 @@
             this.bunifuProgressBar1 = new Bunifu.Framework.UI.BunifuProgressBar();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -46,7 +43,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Schoolbook", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(247, 128);
+            this.label1.Location = new System.Drawing.Point(247, 100);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(306, 64);
             this.label1.TabIndex = 0;
@@ -70,7 +67,7 @@
             this.rectangleShape1.BorderWidth = 2;
             this.rectangleShape1.CornerRadius = 10;
             this.rectangleShape1.FillColor = System.Drawing.Color.Transparent;
-            this.rectangleShape1.Location = new System.Drawing.Point(150, 330);
+            this.rectangleShape1.Location = new System.Drawing.Point(150, 310);
             this.rectangleShape1.Name = "rectangleShape1";
             this.rectangleShape1.Size = new System.Drawing.Size(500, 20);
             // 
@@ -87,7 +84,7 @@
             this.bunifuProgressBar1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.bunifuProgressBar1.BorderRadius = 10;
             this.bunifuProgressBar1.ForeColor = System.Drawing.SystemColors.Control;
-            this.bunifuProgressBar1.Location = new System.Drawing.Point(155, 334);
+            this.bunifuProgressBar1.Location = new System.Drawing.Point(155, 314);
             this.bunifuProgressBar1.MaximumValue = 100;
             this.bunifuProgressBar1.Name = "bunifuProgressBar1";
             this.bunifuProgressBar1.ProgressColor = System.Drawing.Color.LightCyan;
@@ -99,12 +96,12 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Font = new System.Drawing.Font("Century Schoolbook", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Schoolbook", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(311, 192);
+            this.label2.Location = new System.Drawing.Point(377, 164);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(5);
-            this.label2.Size = new System.Drawing.Size(190, 28);
+            this.label2.Size = new System.Drawing.Size(157, 27);
             this.label2.TabIndex = 3;
             this.label2.Text = "S P E E C H   T O   T E X T";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -113,26 +110,15 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3.Font = new System.Drawing.Font("Century Schoolbook", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Century Schoolbook", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(325, 232);
+            this.label3.Location = new System.Drawing.Point(402, 196);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(5);
-            this.label3.Size = new System.Drawing.Size(159, 28);
+            this.label3.Size = new System.Drawing.Size(132, 27);
             this.label3.TabIndex = 4;
             this.label3.Text = "T R A N S L A T I O N";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(346, 25);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
             // 
             // Form2
             // 
@@ -140,7 +126,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
             this.ClientSize = new System.Drawing.Size(800, 400);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.bunifuProgressBar1);
@@ -150,7 +135,6 @@
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,6 +149,5 @@
         private Bunifu.Framework.UI.BunifuProgressBar bunifuProgressBar1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
