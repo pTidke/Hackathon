@@ -71,7 +71,8 @@ namespace SpeechToText
         {
             //loading the panel
             summaryPanel1.BringToFront();
-            summaryPanel1.Visible = true;            
+            summaryPanel1.Visible = false;
+            summaryPanel1.Visible = true;              
         }
 
         private void button3_Click(object sender, EventArgs e)
