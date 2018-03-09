@@ -164,6 +164,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="ReadMe.txt" />
+    <None Include="Resources\icons8_Block_Microphone_40px.png" />
+    <None Include="Resources\icons8_Microphone_40px.png" />
+    <None Include="Resources\Image1.png" />
     <None Include="Resources\logo.png" />
     <None Include="Resources\minimize.png" />
     <None Include="Resources\close.png" />

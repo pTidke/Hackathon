@@ -13,7 +13,7 @@ namespace SpeechToText
     {
         
         public static void Parse(ToneAnalyzerJSON JSON, string inputText)
-        {
+        {            
             Newtonsoft.Json.JsonConvert.PopulateObject(getResponse(inputText), JSON);
         }
         public static string getResponse(string inputText)

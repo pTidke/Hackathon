@@ -95,6 +95,7 @@ namespace SpeechToText
             summaryCaller = "uploadPanel";
             summaryPanel1.BringToFront();
             summaryPanel1.Visible = false;
+            recordingPanel1.Visible = false;
             summaryPanel1.Visible = true;              
         }
 

@@ -27,17 +27,21 @@ namespace SpeechToText
         speechtotext stt = new speechtotext();
         private void RecordingPanel_VisibleChanged(object sender, EventArgs e)
         {
-            
+            textBox_FinalResponse.Text = "";
+            textBox_interimResponse.Text = "";
+            textBox_interimTranslated.Text = "";
+            //label_log.Text = "Log";
         }
         int responseCounter = 0;
         string interimResponse;
         private void Stt_ResponseReceived(object sender, ResponseEventArgs e)
         {
+            e.interimResponse =  e.interimResponse.Replace("%HESITATION", " .... ");
             interimResponse = e.interimResponse;
             textBox_interimResponse.Text = e.interimResponse;            
             textBox_FinalResponse.Text += e.interimResponse;
             responseCounter++;
-            label_log.Text = "response " + responseCounter.ToString() + " recieved";
+            //label_log.Text = "response " + responseCounter.ToString() + " recieved";
             Task.Run(() => translate_interim());
         }
         public void translate_interim()
@@ -57,8 +61,10 @@ namespace SpeechToText
         }
         private void button_startStopToggle_Click(object sender, EventArgs e)
         {
-            if (Form1.isTranscribing)// starting the transcription session
+            if ((Form1.isTranscribing) && (this.Visible == true))// starting the transcription session
             {
+
+                button_startStopToggle.Image = new Bitmap(SpeechToText.Properties.Resources.micStop);
                 Form1.isTranscribing = false;
                 Form1.outputText = "";
                 textBox_FinalResponse.Text = "";
@@ -70,6 +76,7 @@ namespace SpeechToText
             }
             else//stopping the  transcription session
             {
+                button_startStopToggle.Image = new Bitmap(SpeechToText.Properties.Resources.micOn);
                 Form1.isTranscribing = false;
                 label_listening.Visible = false;
                 textBox_interimResponse.Text = "";
@@ -82,6 +89,12 @@ namespace SpeechToText
         private void button_startStopToggle_MouseLeave(object sender, EventArgs e)
         {
             //this.button_startStopToggle.Image = bkg;
+            //this.button_startStopToggle.Image = SpeechToText.Properties.Resources.micStop;
+        }
+
+        private void button_startStopToggle_MouseEnter(object sender, EventArgs e)
+        {
+            //this.button_startStopToggle.Image = SpeechToText.Properties.Resources.micOn;
         }
     }
 }

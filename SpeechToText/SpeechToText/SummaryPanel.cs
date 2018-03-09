@@ -61,66 +61,74 @@ namespace SpeechToText
         }
         private void ToneSetterRecord(string text)
         {
-            ToneAnalyzerJSON obj = new ToneAnalyzerJSON();
-            ToneAnalyser.Parse(obj, text);
-            for (int i = 0; i < obj.document_tone.tones.Length; i++)
+            try
             {
-                if (obj.document_tone.tones[i].tone_id == "sadness")
-                    bunifuCircleProgressbar_sad.Value = (int)(obj.document_tone.tones[i].score * 100);
-                else if (obj.document_tone.tones[i].tone_id == "joy")
-                    bunifuCircleProgressbar_happy.Value = (int)(obj.document_tone.tones[i].score * 100);
-                else if (obj.document_tone.tones[i].tone_id == "fear")
-                    bunifuCircleProgressbar_fear.Value = (int)(obj.document_tone.tones[i].score * 100);
-                else if (obj.document_tone.tones[i].tone_id == "disgust")
-                    bunifuCircleProgressbar_disgust.Value = (int)(obj.document_tone.tones[i].score * 100);
-                else if (obj.document_tone.tones[i].tone_id == "anger")
-                    bunifuCircleProgressbar_anger.Value = (int)(obj.document_tone.tones[i].score * 100);
+                ToneAnalyzerJSON obj = new ToneAnalyzerJSON();
+                ToneAnalyser.Parse(obj, text);
+                for (int i = 0; i < obj.document_tone.tones.Length; i++)
+                {
+                    if (obj.document_tone.tones[i].tone_id == "sadness")
+                        bunifuCircleProgressbar_sad.Value = (int)(obj.document_tone.tones[i].score * 100);
+                    else if (obj.document_tone.tones[i].tone_id == "joy")
+                        bunifuCircleProgressbar_happy.Value = (int)(obj.document_tone.tones[i].score * 100);
+                    else if (obj.document_tone.tones[i].tone_id == "fear")
+                        bunifuCircleProgressbar_fear.Value = (int)(obj.document_tone.tones[i].score * 100);
+                    else if (obj.document_tone.tones[i].tone_id == "disgust")
+                        bunifuCircleProgressbar_disgust.Value = (int)(obj.document_tone.tones[i].score * 100);
+                    else if (obj.document_tone.tones[i].tone_id == "anger")
+                        bunifuCircleProgressbar_anger.Value = (int)(obj.document_tone.tones[i].score * 100);
 
-                else if (obj.document_tone.tones[i].tone_id == "confident")
-                    bunifuCircleProgressbar_confidence.Value = (int)(obj.document_tone.tones[i].score * 100);
+                    else if (obj.document_tone.tones[i].tone_id == "confident")
+                        bunifuCircleProgressbar_confidence.Value = (int)(obj.document_tone.tones[i].score * 100);
+                }
+                Form1.outputText = text;
             }
-            Form1.outputText = text;
+            catch { }
         }
         private void ToneSetterUpload(string text)
         {
-            ToneAnalyzerJSON obj = new ToneAnalyzerJSON();
-            ToneAnalyser.Parse(obj, text);
-           
-            int[] a = { 0, 0, 0, 0, 0, 0 };
-            foreach (var item in obj.sentences_tone)
+            try
             {
-                foreach (var i in item.tones)
+                ToneAnalyzerJSON obj = new ToneAnalyzerJSON();
+                ToneAnalyser.Parse(obj, text);
+
+                int[] a = { 0, 0, 0, 0, 0, 0 };
+                foreach (var item in obj.sentences_tone)
                 {
-                    if (i.tone_id == "joy")
-                        a[0] += (int)(i.score * 100);
-                    else if (i.tone_id == "anger")
-                        a[1] += (int)(i.score * 100);
-                    else if (i.tone_id == "sadness")
-                        a[2] += (int)(i.score * 100);
-                    else if (i.tone_id == "disgust")
-                        a[3] += (int)(i.score * 100);
-                    else if (i.tone_id == "fear")
-                        a[4] += (int)(i.score * 100);
-                    else if (i.tone_id == "confident")
-                        a[5] += (int)(i.score * 100);
+                    foreach (var i in item.tones)
+                    {
+                        if (i.tone_id == "joy")
+                            a[0] += (int)(i.score * 100);
+                        else if (i.tone_id == "anger")
+                            a[1] += (int)(i.score * 100);
+                        else if (i.tone_id == "sadness")
+                            a[2] += (int)(i.score * 100);
+                        else if (i.tone_id == "disgust")
+                            a[3] += (int)(i.score * 100);
+                        else if (i.tone_id == "fear")
+                            a[4] += (int)(i.score * 100);
+                        else if (i.tone_id == "confident")
+                            a[5] += (int)(i.score * 100);
+                    }
                 }
+
+                for (int i = 0; i < 6; i++)
+                {
+                    a[i] = a[i] / obj.sentences_tone.Length;
+                }
+
+
+                bunifuCircleProgressbar_happy.Value = a[0];
+                bunifuCircleProgressbar_anger.Value = a[1];
+                bunifuCircleProgressbar_sad.Value = a[2];
+                bunifuCircleProgressbar_disgust.Value = a[3];
+                bunifuCircleProgressbar_fear.Value = a[4];
+                bunifuCircleProgressbar_confidence.Value = a[5];
+
+
+                Form1.outputText = text;
             }
-           
-            for (int i = 0; i < 6; i++)
-            {
-                a[i] = a[i] / obj.sentences_tone.Length;
-            }
-
-
-            bunifuCircleProgressbar_happy.Value = a[0];
-            bunifuCircleProgressbar_anger.Value = a[1];
-            bunifuCircleProgressbar_sad.Value = a[2];
-            bunifuCircleProgressbar_disgust.Value = a[3];
-            bunifuCircleProgressbar_fear.Value = a[4];
-            bunifuCircleProgressbar_confidence.Value = a[5];
-
-
-            Form1.outputText = text;
+            catch { }
         }
         private void SummaryPanel_VisibleChanged(object sender, EventArgs e)
         {

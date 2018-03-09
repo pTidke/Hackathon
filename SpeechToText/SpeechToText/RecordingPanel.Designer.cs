@@ -32,10 +32,9 @@
             this.textBox_FinalResponse = new System.Windows.Forms.TextBox();
             this.textBox_interimResponse = new System.Windows.Forms.TextBox();
             this.label_listening = new System.Windows.Forms.Label();
-            this.button_startStopToggle = new System.Windows.Forms.Button();
-            this.label_log = new System.Windows.Forms.Label();
             this.textBox_interimTranslated = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button_startStopToggle = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox_FinalResponse
@@ -72,31 +71,6 @@
             this.label_listening.Text = "Listening ...";
             this.label_listening.Visible = false;
             // 
-            // button_startStopToggle
-            // 
-            this.button_startStopToggle.BackColor = System.Drawing.Color.Transparent;
-            this.button_startStopToggle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_startStopToggle.FlatAppearance.BorderSize = 0;
-            this.button_startStopToggle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(222)))), ((int)(((byte)(251)))));
-            this.button_startStopToggle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_startStopToggle.Image = ((System.Drawing.Image)(resources.GetObject("button_startStopToggle.Image")));
-            this.button_startStopToggle.Location = new System.Drawing.Point(454, 473);
-            this.button_startStopToggle.Name = "button_startStopToggle";
-            this.button_startStopToggle.Size = new System.Drawing.Size(40, 40);
-            this.button_startStopToggle.TabIndex = 3;
-            this.button_startStopToggle.UseVisualStyleBackColor = false;
-            this.button_startStopToggle.Click += new System.EventHandler(this.button_startStopToggle_Click);
-            this.button_startStopToggle.MouseLeave += new System.EventHandler(this.button_startStopToggle_MouseLeave);
-            // 
-            // label_log
-            // 
-            this.label_log.AutoSize = true;
-            this.label_log.Location = new System.Drawing.Point(22, 473);
-            this.label_log.Name = "label_log";
-            this.label_log.Size = new System.Drawing.Size(35, 13);
-            this.label_log.TabIndex = 4;
-            this.label_log.Text = "label1";
-            // 
             // textBox_interimTranslated
             // 
             this.textBox_interimTranslated.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(222)))), ((int)(((byte)(251)))));
@@ -115,6 +89,21 @@
             this.panel1.Size = new System.Drawing.Size(950, 440);
             this.panel1.TabIndex = 6;
             // 
+            // button_startStopToggle
+            // 
+            this.button_startStopToggle.BackColor = System.Drawing.Color.Transparent;
+            this.button_startStopToggle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button_startStopToggle.FlatAppearance.BorderSize = 0;
+            this.button_startStopToggle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_startStopToggle.Image = ((System.Drawing.Image)(resources.GetObject("button_startStopToggle.Image")));
+            this.button_startStopToggle.Location = new System.Drawing.Point(454, 473);
+            this.button_startStopToggle.Name = "button_startStopToggle";
+            this.button_startStopToggle.Size = new System.Drawing.Size(40, 40);
+            this.button_startStopToggle.TabIndex = 3;
+            this.button_startStopToggle.UseVisualStyleBackColor = false;
+            this.button_startStopToggle.Click += new System.EventHandler(this.button_startStopToggle_Click);
+            this.button_startStopToggle.MouseLeave += new System.EventHandler(this.button_startStopToggle_MouseLeave);
+            // 
             // RecordingPanel
             // 
             this.AllowDrop = true;
@@ -122,7 +111,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(222)))), ((int)(((byte)(251)))));
             this.Controls.Add(this.textBox_interimTranslated);
-            this.Controls.Add(this.label_log);
             this.Controls.Add(this.button_startStopToggle);
             this.Controls.Add(this.label_listening);
             this.Controls.Add(this.textBox_interimResponse);
@@ -142,7 +130,6 @@
         private System.Windows.Forms.TextBox textBox_interimResponse;
         private System.Windows.Forms.Label label_listening;
         private System.Windows.Forms.Button button_startStopToggle;
-        private System.Windows.Forms.Label label_log;
         private System.Windows.Forms.TextBox textBox_interimTranslated;
         private System.Windows.Forms.Panel panel1;
     }
