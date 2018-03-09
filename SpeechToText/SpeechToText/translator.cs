@@ -26,7 +26,7 @@ namespace SpeechToText
 
         public static string _apiKey = "trnsl.1.1.20180307T211340Z.c8ce0e240e55c0a2.d1bb1b162d6beb272f223d88d676f826ec613db1";
 
-        public static List<string> Translate(string lang, string text)
+        public static string Translate(string lang, string text)
         {
             var requestString = String.Format("https://translate.yandex.net/api/v1.5/tr.json/translate?key={0}&text={1}&lang={2}&format={3}", _apiKey, text, lang, "plain");
             var request = WebRequest.Create(requestString);
@@ -45,8 +45,9 @@ namespace SpeechToText
                 translateData = new TranslateData();
                 translateData.Text = new List<string>();
             }
-            translateData.Text.ForEach(i => Console.Write("{0}\t", i));
-            return translateData.Text;
+            translateData.Text.ForEach(i => Console.Write("{0}\t", i));            
+            string translateText = string.Join(Environment.NewLine, translateData.Text.ToArray());
+            return translateText;
         }
         [DataContract]
         internal class TranslateData

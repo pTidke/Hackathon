@@ -28,7 +28,19 @@ namespace SpeechToText
             toolTip1.SetToolTip(button_teluguLanguage, "Telugu");
             toolTip1.SetToolTip(button, "Close Application");
             toolTip1.SetToolTip(button2, "Minimize Application");
+            recordingPanel1.TranscriptionStopped += RecordingPanel1_TranscriptionStopped;
         }
+
+        public static string summaryCaller = "none";
+        private void RecordingPanel1_TranscriptionStopped(object sender, ResponseEventArgs e)
+        {
+            outputText = e.interimResponse;
+            summaryCaller = "recordingPanel";
+            summaryPanel1.BringToFront();
+            summaryPanel1.Visible = false;
+            summaryPanel1.Visible = true;
+        }
+
         private const int cGrip = 16;
         private const int cCaption = 32;
 
@@ -66,6 +78,7 @@ namespace SpeechToText
         {
             //label_listening.Visible = !label_listening.Visible;
             isTranscribing = true;
+            outputText = "";
             recordingPanel1.BringToFront();
             recordingPanel1.Visible = true;
         }
@@ -73,6 +86,8 @@ namespace SpeechToText
         private void button_upload_Click(object sender, EventArgs e)
         {
             //loading the panel
+            outputText = "";
+            summaryCaller = "uploadPanel";
             summaryPanel1.BringToFront();
             summaryPanel1.Visible = false;
             summaryPanel1.Visible = true;              
@@ -89,9 +104,8 @@ namespace SpeechToText
         private void setSummaryTranslation()
         {
             if (outputText != null && outputText != "")
-            {
-                List<String> trans_data = translator.Translate(lang, outputText);
-                string trans_output = string.Join(Environment.NewLine, trans_data.ToArray());
+            {                
+                string trans_output = translator.Translate(lang, outputText);
 
                 UTF8Encoding utf8 = new UTF8Encoding();
                 byte[] encodedBytes = utf8.GetBytes(trans_output);

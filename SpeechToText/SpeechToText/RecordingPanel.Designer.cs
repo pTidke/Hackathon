@@ -33,6 +33,7 @@
             this.label_listening = new System.Windows.Forms.Label();
             this.button_startStopToggle = new System.Windows.Forms.Button();
             this.label_log = new System.Windows.Forms.Label();
+            this.textBox_interimTranslated = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBox_FinalResponse
@@ -44,7 +45,7 @@
             this.textBox_FinalResponse.Margin = new System.Windows.Forms.Padding(25);
             this.textBox_FinalResponse.Multiline = true;
             this.textBox_FinalResponse.Name = "textBox_FinalResponse";
-            this.textBox_FinalResponse.Size = new System.Drawing.Size(950, 450);
+            this.textBox_FinalResponse.Size = new System.Drawing.Size(950, 411);
             this.textBox_FinalResponse.TabIndex = 0;
             // 
             // textBox_interimResponse
@@ -52,7 +53,7 @@
             this.textBox_interimResponse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(222)))), ((int)(((byte)(251)))));
             this.textBox_interimResponse.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_interimResponse.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_interimResponse.Location = new System.Drawing.Point(389, 503);
+            this.textBox_interimResponse.Location = new System.Drawing.Point(389, 447);
             this.textBox_interimResponse.Name = "textBox_interimResponse";
             this.textBox_interimResponse.Size = new System.Drawing.Size(475, 30);
             this.textBox_interimResponse.TabIndex = 1;
@@ -62,7 +63,7 @@
             this.label_listening.AutoSize = true;
             this.label_listening.Font = new System.Drawing.Font("MS Reference Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_listening.ForeColor = System.Drawing.Color.Green;
-            this.label_listening.Location = new System.Drawing.Point(252, 504);
+            this.label_listening.Location = new System.Drawing.Point(20, 517);
             this.label_listening.Name = "label_listening";
             this.label_listening.Size = new System.Drawing.Size(131, 26);
             this.label_listening.TabIndex = 2;
@@ -71,7 +72,7 @@
             // 
             // button_startStopToggle
             // 
-            this.button_startStopToggle.Location = new System.Drawing.Point(870, 503);
+            this.button_startStopToggle.Location = new System.Drawing.Point(870, 447);
             this.button_startStopToggle.Name = "button_startStopToggle";
             this.button_startStopToggle.Size = new System.Drawing.Size(105, 30);
             this.button_startStopToggle.TabIndex = 3;
@@ -82,11 +83,21 @@
             // label_log
             // 
             this.label_log.AutoSize = true;
-            this.label_log.Location = new System.Drawing.Point(31, 512);
+            this.label_log.Location = new System.Drawing.Point(22, 445);
             this.label_log.Name = "label_log";
             this.label_log.Size = new System.Drawing.Size(35, 13);
             this.label_log.TabIndex = 4;
             this.label_log.Text = "label1";
+            // 
+            // textBox_interimTranslated
+            // 
+            this.textBox_interimTranslated.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(222)))), ((int)(((byte)(251)))));
+            this.textBox_interimTranslated.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_interimTranslated.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_interimTranslated.Location = new System.Drawing.Point(389, 483);
+            this.textBox_interimTranslated.Name = "textBox_interimTranslated";
+            this.textBox_interimTranslated.Size = new System.Drawing.Size(475, 23);
+            this.textBox_interimTranslated.TabIndex = 5;
             // 
             // RecordingPanel
             // 
@@ -94,6 +105,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(222)))), ((int)(((byte)(251)))));
+            this.Controls.Add(this.textBox_interimTranslated);
             this.Controls.Add(this.label_log);
             this.Controls.Add(this.button_startStopToggle);
             this.Controls.Add(this.label_listening);
@@ -114,5 +126,6 @@
         private System.Windows.Forms.Label label_listening;
         private System.Windows.Forms.Button button_startStopToggle;
         private System.Windows.Forms.Label label_log;
+        private System.Windows.Forms.TextBox textBox_interimTranslated;
     }
 }

@@ -36,6 +36,7 @@
             this.button = new System.Windows.Forms.Button();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel_language = new System.Windows.Forms.Panel();
             this.button_teluguLanguage = new System.Windows.Forms.Button();
             this.button_tamilLanguage = new System.Windows.Forms.Button();
@@ -50,7 +51,6 @@
             this.recordingPanel1 = new SpeechToText.RecordingPanel();
             this.uplaodingPanel1 = new SpeechToText.UplaodingPanel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label2 = new System.Windows.Forms.Label();
             this.panelHeader.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel_language.SuspendLayout();
@@ -123,6 +123,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(100, 600);
             this.panel1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkGray;
+            this.label2.Location = new System.Drawing.Point(25, 570);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 20);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "OFF";
             // 
             // panel_language
             // 
@@ -281,17 +292,6 @@
             this.uplaodingPanel1.Size = new System.Drawing.Size(1000, 560);
             this.uplaodingPanel1.TabIndex = 3;
             this.uplaodingPanel1.Visible = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkGray;
-            this.label2.Location = new System.Drawing.Point(25, 570);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 20);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "OFF";
             // 
             // Form1
             // 
