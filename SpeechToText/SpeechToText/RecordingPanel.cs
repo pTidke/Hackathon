@@ -12,7 +12,8 @@ using System.Threading;
 namespace SpeechToText
 {
     public partial class RecordingPanel : UserControl
-    {        
+    {
+        //public Image bkg = Image.FromFile(@"C:\Users\prajw\Documents\GitHub\Hackathon\SpeechToText\SpeechToText\resources\icons8_Block_Microphone_40px");
         public RecordingPanel()
         {
             InitializeComponent();            
@@ -56,7 +57,7 @@ namespace SpeechToText
         }
         private void button_startStopToggle_Click(object sender, EventArgs e)
         {
-            if(Form1.isTranscribing)// starting the transcription session
+            if (Form1.isTranscribing)// starting the transcription session
             {
                 Form1.isTranscribing = false;
                 Form1.outputText = "";
@@ -76,6 +77,11 @@ namespace SpeechToText
                 OnTranscriptionStopped(new ResponseEventArgs(textBox_FinalResponse.Text));
                 // now loading the summary panel
             }
+        }
+
+        private void button_startStopToggle_MouseLeave(object sender, EventArgs e)
+        {
+            //this.button_startStopToggle.Image = bkg;
         }
     }
 }
