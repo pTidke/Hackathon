@@ -150,6 +150,7 @@ namespace SpeechToText
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            uplaodingPanel1.BringToFront();
             uplaodingPanel1.Visible = !uplaodingPanel1.Visible;
         }
     }

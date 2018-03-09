@@ -327,12 +327,17 @@
             // 
             // button_saveToFile
             // 
-            this.button_saveToFile.Location = new System.Drawing.Point(765, 271);
+            this.button_saveToFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(222)))), ((int)(((byte)(251)))));
+            this.button_saveToFile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button_saveToFile.FlatAppearance.BorderSize = 0;
+            this.button_saveToFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_saveToFile.ForeColor = System.Drawing.Color.Transparent;
+            this.button_saveToFile.Image = ((System.Drawing.Image)(resources.GetObject("button_saveToFile.Image")));
+            this.button_saveToFile.Location = new System.Drawing.Point(765, 264);
             this.button_saveToFile.Name = "button_saveToFile";
-            this.button_saveToFile.Size = new System.Drawing.Size(60, 23);
+            this.button_saveToFile.Size = new System.Drawing.Size(60, 33);
             this.button_saveToFile.TabIndex = 20;
-            this.button_saveToFile.Text = "Save";
-            this.button_saveToFile.UseVisualStyleBackColor = true;
+            this.button_saveToFile.UseVisualStyleBackColor = false;
             this.button_saveToFile.Click += new System.EventHandler(this.button_saveToFile_Click);
             // 
             // SummaryPanel

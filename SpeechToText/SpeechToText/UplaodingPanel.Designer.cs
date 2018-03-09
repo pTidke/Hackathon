@@ -51,7 +51,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
-            this.label2.Location = new System.Drawing.Point(57, 258);
+            this.label2.Location = new System.Drawing.Point(57, 260);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(5);
             this.label2.Size = new System.Drawing.Size(143, 35);
@@ -80,9 +80,9 @@
             this.label3.Location = new System.Drawing.Point(343, 458);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(5);
-            this.label3.Size = new System.Drawing.Size(188, 26);
+            this.label3.Size = new System.Drawing.Size(242, 26);
             this.label3.TabIndex = 6;
-            this.label3.Text = "3 .   M O H I T   R A J A W A T";
+            this.label3.Text = "3 .   M O H I T    S I N G H    R A J P U T";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
@@ -160,7 +160,7 @@
             this.label9.Padding = new System.Windows.Forms.Padding(5);
             this.label9.Size = new System.Drawing.Size(358, 26);
             this.label9.TabIndex = 12;
-            this.label9.Text = "1 .   I B M    W A T S O N    T O N E    A N A L Y Z E R    A P I";
+            this.label9.Text = "2 .   I B M    W A T S O N    T O N E    A N A L Y Z E R    A P I";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label10
@@ -173,7 +173,7 @@
             this.label10.Padding = new System.Windows.Forms.Padding(5);
             this.label10.Size = new System.Drawing.Size(286, 26);
             this.label10.TabIndex = 13;
-            this.label10.Text = "1 .   Y A N D E X    T R A N S L A T I O N    A P I";
+            this.label10.Text = "3 .   Y A N D E X    T R A N S L A T I O N    A P I";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label13
@@ -194,7 +194,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
-            this.label14.Location = new System.Drawing.Point(57, 114);
+            this.label14.Location = new System.Drawing.Point(57, 117);
             this.label14.Name = "label14";
             this.label14.Padding = new System.Windows.Forms.Padding(5);
             this.label14.Size = new System.Drawing.Size(263, 35);
@@ -220,7 +220,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
-            this.label16.Location = new System.Drawing.Point(58, 166);
+            this.label16.Location = new System.Drawing.Point(58, 169);
             this.label16.Name = "label16";
             this.label16.Padding = new System.Windows.Forms.Padding(5);
             this.label16.Size = new System.Drawing.Size(277, 35);
@@ -238,7 +238,7 @@
             this.label17.Padding = new System.Windows.Forms.Padding(5);
             this.label17.Size = new System.Drawing.Size(281, 26);
             this.label17.TabIndex = 20;
-            this.label17.Text = "1 .   N A U D I O   A N D   N A U D I O . L A M E";
+            this.label17.Text = "2 .   N A U D I O   A N D   N A U D I O . L A M E";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label11
@@ -246,7 +246,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
-            this.label11.Location = new System.Drawing.Point(58, 385);
+            this.label11.Location = new System.Drawing.Point(58, 388);
             this.label11.Name = "label11";
             this.label11.Padding = new System.Windows.Forms.Padding(5);
             this.label11.Size = new System.Drawing.Size(164, 35);
