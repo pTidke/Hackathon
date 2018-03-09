@@ -79,7 +79,8 @@ namespace SpeechToText
             //label_listening.Visible = !label_listening.Visible;
             isTranscribing = true;
             outputText = "";
-            recordingPanel1.BringToFront();
+            recordingPanel1.Visible = false;
+            recordingPanel1.BringToFront();           
             recordingPanel1.Visible = true;
         }
 
