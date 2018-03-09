@@ -37,9 +37,10 @@ namespace SpeechToText
                 openFileDialog1.Filter = "Wave audio (*.wav)|*.wav|Mp3 audio (*.mp3)|*.mp3";
                 string filePath;
                 string outputText;
-                richTextBox_summary.Text = "Please wait. we are working on the file.";
+               
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
+                    richTextBox_summary.Text = "Please wait. we are working on the file.";
                     filePath = openFileDialog1.FileName;
                     //requesting response from server
                     if (filePath.Substring(filePath.Length - 3) == "wav")

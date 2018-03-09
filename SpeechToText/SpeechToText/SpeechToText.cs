@@ -5,11 +5,28 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading;
+using System.Windows.Forms;
 
 namespace SpeechToText
 {
+    public class ResponseEventArgs : EventArgs
+    {
+        public string interimResponse;
+        public ResponseEventArgs(string result)
+        {
+            interimResponse = result;
+        }
+    }
+
+    public delegate void ResponseEventHandler(object sender, ResponseEventArgs e);
     class speechtotext
     {
+        public event ResponseEventHandler ResponseReceived;
+
+        protected virtual void OnResponseRecieved(ResponseEventArgs e)
+        {
+            if (ResponseReceived != null) ResponseReceived(this, e);
+        }
         string res = "";
         public static Rootobject parse(string json)
         {
@@ -76,7 +93,7 @@ namespace SpeechToText
                 return json;
             }
         }
-        public static void GetResponses()
+        public void GetResponses()
         {            
             for (int j = 0; ; j++)
             {
@@ -94,7 +111,8 @@ namespace SpeechToText
                         for (int i = 0; i < rootobject.results.Length; i++)
                         {
                             string transcript = rootobject.results[i].alternatives[0].transcript.ToString();
-                            Console.WriteLine(transcript);
+                            //triggering the event response recieved
+                            OnResponseRecieved(new ResponseEventArgs(transcript));                            
                         }
                     }
                     else
@@ -106,11 +124,11 @@ namespace SpeechToText
                 }
             }
         }
-        static int recordingFlag = 0;
+        public static int recordingFlag = 0;
 
         public string Res { get => res; set => res = value; }
 
-        public static void recordInChunks()
+        public void recordInChunks()
         {
             for (int i = 0; recordingFlag!=0; i++)
             {
@@ -124,7 +142,7 @@ namespace SpeechToText
                 recorder.stopRecording();
             }
         }
-        public static void StartTranscribe()
+        public void StartTranscribe()
         {
             recordingFlag = 1;
             Thread recorderThread = new Thread(new ThreadStart(recordInChunks));            
@@ -133,7 +151,7 @@ namespace SpeechToText
             Thread.Sleep(5300);
             responseThread.Start();
         }
-        public static void stopTranscription()
+        public void stopTranscription()
         {
             recordingFlag = 0;
             for (int i = 0;  ; i++)
