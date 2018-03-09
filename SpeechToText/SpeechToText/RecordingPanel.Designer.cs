@@ -77,6 +77,7 @@
             this.Controls.Add(this.textBox_FinalResponse);
             this.Name = "RecordingPanel";
             this.Size = new System.Drawing.Size(1000, 560);
+            this.VisibleChanged += new System.EventHandler(this.RecordingPanel_VisibleChanged);
             this.ResumeLayout(false);
             this.PerformLayout();
 

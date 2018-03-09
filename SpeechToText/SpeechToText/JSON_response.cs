@@ -2,7 +2,7 @@
 {
     public class Rootobject
     {
-        public Result[] results { get; set; }
+        public Result[] results { get; set; }   
         public int result_index { get; set; }
     }
 
