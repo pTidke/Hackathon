@@ -22,14 +22,9 @@ namespace SpeechToText
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
-            bunifuProgressBar1.Value += 1;
-            if (bunifuProgressBar1.Value >= bunifuProgressBar1.MaximumValue )
-            {
-                timer1.Stop();
-                form1.Show();
-                this.Hide();
-            }
+            timer1.Stop();
+            form1.Show();
+            this.Hide();
         }
     }
 }

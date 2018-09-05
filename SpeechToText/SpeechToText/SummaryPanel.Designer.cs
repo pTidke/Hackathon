@@ -37,12 +37,6 @@
             this.pictureBox_disgust = new System.Windows.Forms.PictureBox();
             this.pictureBox_sad = new System.Windows.Forms.PictureBox();
             this.pictureBox_confidence = new System.Windows.Forms.PictureBox();
-            this.bunifuCircleProgressbar_happy = new Bunifu.Framework.UI.BunifuCircleProgressbar();
-            this.bunifuCircleProgressbar_confidence = new Bunifu.Framework.UI.BunifuCircleProgressbar();
-            this.bunifuCircleProgressbar_fear = new Bunifu.Framework.UI.BunifuCircleProgressbar();
-            this.bunifuCircleProgressbar_disgust = new Bunifu.Framework.UI.BunifuCircleProgressbar();
-            this.bunifuCircleProgressbar_sad = new Bunifu.Framework.UI.BunifuCircleProgressbar();
-            this.bunifuCircleProgressbar_anger = new Bunifu.Framework.UI.BunifuCircleProgressbar();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.label1 = new System.Windows.Forms.Label();
@@ -52,6 +46,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button_saveToFile = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.label_happy = new System.Windows.Forms.Label();
+            this.label_angry = new System.Windows.Forms.Label();
+            this.label_sad = new System.Windows.Forms.Label();
+            this.label_disgust = new System.Windows.Forms.Label();
+            this.label_fear = new System.Windows.Forms.Label();
+            this.label_confidence = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_happy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_anger)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_fear)).BeginInit();
@@ -133,144 +133,6 @@
             this.pictureBox_confidence.TabIndex = 8;
             this.pictureBox_confidence.TabStop = false;
             // 
-            // bunifuCircleProgressbar_happy
-            // 
-            this.bunifuCircleProgressbar_happy.animated = false;
-            this.bunifuCircleProgressbar_happy.animationIterval = 5;
-            this.bunifuCircleProgressbar_happy.animationSpeed = 300;
-            this.bunifuCircleProgressbar_happy.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCircleProgressbar_happy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCircleProgressbar_happy.BackgroundImage")));
-            this.bunifuCircleProgressbar_happy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.bunifuCircleProgressbar_happy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCircleProgressbar_happy.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCircleProgressbar_happy.LabelVisible = true;
-            this.bunifuCircleProgressbar_happy.LineProgressThickness = 8;
-            this.bunifuCircleProgressbar_happy.LineThickness = 5;
-            this.bunifuCircleProgressbar_happy.Location = new System.Drawing.Point(921, 41);
-            this.bunifuCircleProgressbar_happy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuCircleProgressbar_happy.MaxValue = 100;
-            this.bunifuCircleProgressbar_happy.Name = "bunifuCircleProgressbar_happy";
-            this.bunifuCircleProgressbar_happy.ProgressBackColor = System.Drawing.Color.Gainsboro;
-            this.bunifuCircleProgressbar_happy.ProgressColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCircleProgressbar_happy.Size = new System.Drawing.Size(75, 75);
-            this.bunifuCircleProgressbar_happy.TabIndex = 9;
-            this.bunifuCircleProgressbar_happy.Value = 0;
-            // 
-            // bunifuCircleProgressbar_confidence
-            // 
-            this.bunifuCircleProgressbar_confidence.animated = false;
-            this.bunifuCircleProgressbar_confidence.animationIterval = 5;
-            this.bunifuCircleProgressbar_confidence.animationSpeed = 300;
-            this.bunifuCircleProgressbar_confidence.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCircleProgressbar_confidence.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCircleProgressbar_confidence.BackgroundImage")));
-            this.bunifuCircleProgressbar_confidence.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.bunifuCircleProgressbar_confidence.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCircleProgressbar_confidence.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCircleProgressbar_confidence.LabelVisible = true;
-            this.bunifuCircleProgressbar_confidence.LineProgressThickness = 8;
-            this.bunifuCircleProgressbar_confidence.LineThickness = 5;
-            this.bunifuCircleProgressbar_confidence.Location = new System.Drawing.Point(921, 446);
-            this.bunifuCircleProgressbar_confidence.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuCircleProgressbar_confidence.MaxValue = 100;
-            this.bunifuCircleProgressbar_confidence.Name = "bunifuCircleProgressbar_confidence";
-            this.bunifuCircleProgressbar_confidence.ProgressBackColor = System.Drawing.Color.Gainsboro;
-            this.bunifuCircleProgressbar_confidence.ProgressColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCircleProgressbar_confidence.Size = new System.Drawing.Size(75, 75);
-            this.bunifuCircleProgressbar_confidence.TabIndex = 10;
-            this.bunifuCircleProgressbar_confidence.Value = 0;
-            // 
-            // bunifuCircleProgressbar_fear
-            // 
-            this.bunifuCircleProgressbar_fear.animated = false;
-            this.bunifuCircleProgressbar_fear.animationIterval = 5;
-            this.bunifuCircleProgressbar_fear.animationSpeed = 300;
-            this.bunifuCircleProgressbar_fear.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCircleProgressbar_fear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCircleProgressbar_fear.BackgroundImage")));
-            this.bunifuCircleProgressbar_fear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.bunifuCircleProgressbar_fear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCircleProgressbar_fear.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCircleProgressbar_fear.LabelVisible = true;
-            this.bunifuCircleProgressbar_fear.LineProgressThickness = 8;
-            this.bunifuCircleProgressbar_fear.LineThickness = 5;
-            this.bunifuCircleProgressbar_fear.Location = new System.Drawing.Point(921, 365);
-            this.bunifuCircleProgressbar_fear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuCircleProgressbar_fear.MaxValue = 100;
-            this.bunifuCircleProgressbar_fear.Name = "bunifuCircleProgressbar_fear";
-            this.bunifuCircleProgressbar_fear.ProgressBackColor = System.Drawing.Color.Gainsboro;
-            this.bunifuCircleProgressbar_fear.ProgressColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCircleProgressbar_fear.Size = new System.Drawing.Size(75, 75);
-            this.bunifuCircleProgressbar_fear.TabIndex = 11;
-            this.bunifuCircleProgressbar_fear.Value = 0;
-            // 
-            // bunifuCircleProgressbar_disgust
-            // 
-            this.bunifuCircleProgressbar_disgust.animated = false;
-            this.bunifuCircleProgressbar_disgust.animationIterval = 5;
-            this.bunifuCircleProgressbar_disgust.animationSpeed = 300;
-            this.bunifuCircleProgressbar_disgust.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCircleProgressbar_disgust.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCircleProgressbar_disgust.BackgroundImage")));
-            this.bunifuCircleProgressbar_disgust.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.bunifuCircleProgressbar_disgust.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCircleProgressbar_disgust.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCircleProgressbar_disgust.LabelVisible = true;
-            this.bunifuCircleProgressbar_disgust.LineProgressThickness = 8;
-            this.bunifuCircleProgressbar_disgust.LineThickness = 5;
-            this.bunifuCircleProgressbar_disgust.Location = new System.Drawing.Point(922, 284);
-            this.bunifuCircleProgressbar_disgust.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuCircleProgressbar_disgust.MaxValue = 100;
-            this.bunifuCircleProgressbar_disgust.Name = "bunifuCircleProgressbar_disgust";
-            this.bunifuCircleProgressbar_disgust.ProgressBackColor = System.Drawing.Color.Gainsboro;
-            this.bunifuCircleProgressbar_disgust.ProgressColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCircleProgressbar_disgust.Size = new System.Drawing.Size(75, 75);
-            this.bunifuCircleProgressbar_disgust.TabIndex = 12;
-            this.bunifuCircleProgressbar_disgust.Value = 0;
-            // 
-            // bunifuCircleProgressbar_sad
-            // 
-            this.bunifuCircleProgressbar_sad.animated = false;
-            this.bunifuCircleProgressbar_sad.animationIterval = 5;
-            this.bunifuCircleProgressbar_sad.animationSpeed = 300;
-            this.bunifuCircleProgressbar_sad.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCircleProgressbar_sad.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCircleProgressbar_sad.BackgroundImage")));
-            this.bunifuCircleProgressbar_sad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.bunifuCircleProgressbar_sad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCircleProgressbar_sad.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCircleProgressbar_sad.LabelVisible = true;
-            this.bunifuCircleProgressbar_sad.LineProgressThickness = 8;
-            this.bunifuCircleProgressbar_sad.LineThickness = 5;
-            this.bunifuCircleProgressbar_sad.Location = new System.Drawing.Point(921, 203);
-            this.bunifuCircleProgressbar_sad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuCircleProgressbar_sad.MaxValue = 100;
-            this.bunifuCircleProgressbar_sad.Name = "bunifuCircleProgressbar_sad";
-            this.bunifuCircleProgressbar_sad.ProgressBackColor = System.Drawing.Color.Gainsboro;
-            this.bunifuCircleProgressbar_sad.ProgressColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCircleProgressbar_sad.Size = new System.Drawing.Size(75, 75);
-            this.bunifuCircleProgressbar_sad.TabIndex = 13;
-            this.bunifuCircleProgressbar_sad.Value = 0;
-            // 
-            // bunifuCircleProgressbar_anger
-            // 
-            this.bunifuCircleProgressbar_anger.animated = false;
-            this.bunifuCircleProgressbar_anger.animationIterval = 5;
-            this.bunifuCircleProgressbar_anger.animationSpeed = 300;
-            this.bunifuCircleProgressbar_anger.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCircleProgressbar_anger.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCircleProgressbar_anger.BackgroundImage")));
-            this.bunifuCircleProgressbar_anger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.bunifuCircleProgressbar_anger.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCircleProgressbar_anger.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCircleProgressbar_anger.LabelVisible = true;
-            this.bunifuCircleProgressbar_anger.LineProgressThickness = 8;
-            this.bunifuCircleProgressbar_anger.LineThickness = 5;
-            this.bunifuCircleProgressbar_anger.Location = new System.Drawing.Point(922, 122);
-            this.bunifuCircleProgressbar_anger.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuCircleProgressbar_anger.MaxValue = 100;
-            this.bunifuCircleProgressbar_anger.Name = "bunifuCircleProgressbar_anger";
-            this.bunifuCircleProgressbar_anger.ProgressBackColor = System.Drawing.Color.Gainsboro;
-            this.bunifuCircleProgressbar_anger.ProgressColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCircleProgressbar_anger.Size = new System.Drawing.Size(75, 75);
-            this.bunifuCircleProgressbar_anger.TabIndex = 14;
-            this.bunifuCircleProgressbar_anger.Value = 0;
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -341,21 +203,81 @@
             this.button_saveToFile.UseVisualStyleBackColor = false;
             this.button_saveToFile.Click += new System.EventHandler(this.button_saveToFile_Click);
             // 
+            // label_happy
+            // 
+            this.label_happy.AutoSize = true;
+            this.label_happy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_happy.Location = new System.Drawing.Point(921, 65);
+            this.label_happy.Name = "label_happy";
+            this.label_happy.Size = new System.Drawing.Size(36, 20);
+            this.label_happy.TabIndex = 21;
+            this.label_happy.Text = "0 %";
+            // 
+            // label_angry
+            // 
+            this.label_angry.AutoSize = true;
+            this.label_angry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_angry.Location = new System.Drawing.Point(921, 150);
+            this.label_angry.Name = "label_angry";
+            this.label_angry.Size = new System.Drawing.Size(36, 20);
+            this.label_angry.TabIndex = 22;
+            this.label_angry.Text = "0 %";
+            // 
+            // label_sad
+            // 
+            this.label_sad.AutoSize = true;
+            this.label_sad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_sad.Location = new System.Drawing.Point(921, 225);
+            this.label_sad.Name = "label_sad";
+            this.label_sad.Size = new System.Drawing.Size(36, 20);
+            this.label_sad.TabIndex = 23;
+            this.label_sad.Text = "0 %";
+            // 
+            // label_disgust
+            // 
+            this.label_disgust.AutoSize = true;
+            this.label_disgust.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_disgust.Location = new System.Drawing.Point(921, 313);
+            this.label_disgust.Name = "label_disgust";
+            this.label_disgust.Size = new System.Drawing.Size(36, 20);
+            this.label_disgust.TabIndex = 24;
+            this.label_disgust.Text = "0 %";
+            // 
+            // label_fear
+            // 
+            this.label_fear.AutoSize = true;
+            this.label_fear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_fear.Location = new System.Drawing.Point(921, 393);
+            this.label_fear.Name = "label_fear";
+            this.label_fear.Size = new System.Drawing.Size(36, 20);
+            this.label_fear.TabIndex = 25;
+            this.label_fear.Text = "0 %";
+            // 
+            // label_confidence
+            // 
+            this.label_confidence.AutoSize = true;
+            this.label_confidence.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_confidence.Location = new System.Drawing.Point(921, 475);
+            this.label_confidence.Name = "label_confidence";
+            this.label_confidence.Size = new System.Drawing.Size(36, 20);
+            this.label_confidence.TabIndex = 26;
+            this.label_confidence.Text = "0 %";
+            // 
             // SummaryPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(222)))), ((int)(((byte)(251)))));
+            this.Controls.Add(this.label_confidence);
+            this.Controls.Add(this.label_fear);
+            this.Controls.Add(this.label_disgust);
+            this.Controls.Add(this.label_sad);
+            this.Controls.Add(this.label_angry);
+            this.Controls.Add(this.label_happy);
             this.Controls.Add(this.button_saveToFile);
             this.Controls.Add(this.textBox_translation);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.bunifuCircleProgressbar_anger);
-            this.Controls.Add(this.bunifuCircleProgressbar_sad);
-            this.Controls.Add(this.bunifuCircleProgressbar_disgust);
-            this.Controls.Add(this.bunifuCircleProgressbar_fear);
-            this.Controls.Add(this.bunifuCircleProgressbar_confidence);
-            this.Controls.Add(this.bunifuCircleProgressbar_happy);
             this.Controls.Add(this.pictureBox_confidence);
             this.Controls.Add(this.pictureBox_sad);
             this.Controls.Add(this.pictureBox_disgust);
@@ -389,12 +311,6 @@
         private System.Windows.Forms.PictureBox pictureBox_disgust;
         private System.Windows.Forms.PictureBox pictureBox_sad;
         private System.Windows.Forms.PictureBox pictureBox_confidence;
-        private Bunifu.Framework.UI.BunifuCircleProgressbar bunifuCircleProgressbar_happy;
-        private Bunifu.Framework.UI.BunifuCircleProgressbar bunifuCircleProgressbar_confidence;
-        private Bunifu.Framework.UI.BunifuCircleProgressbar bunifuCircleProgressbar_fear;
-        private Bunifu.Framework.UI.BunifuCircleProgressbar bunifuCircleProgressbar_disgust;
-        private Bunifu.Framework.UI.BunifuCircleProgressbar bunifuCircleProgressbar_sad;
-        private Bunifu.Framework.UI.BunifuCircleProgressbar bunifuCircleProgressbar_anger;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label label1;
@@ -404,5 +320,11 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button_saveToFile;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Label label_happy;
+        private System.Windows.Forms.Label label_angry;
+        private System.Windows.Forms.Label label_sad;
+        private System.Windows.Forms.Label label_disgust;
+        private System.Windows.Forms.Label label_fear;
+        private System.Windows.Forms.Label label_confidence;
     }
 }

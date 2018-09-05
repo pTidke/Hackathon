@@ -68,18 +68,19 @@ namespace SpeechToText
                 for (int i = 0; i < obj.document_tone.tones.Length; i++)
                 {
                     if (obj.document_tone.tones[i].tone_id == "sadness")
-                        bunifuCircleProgressbar_sad.Value = (int)(obj.document_tone.tones[i].score * 100);
+                        label_sad.Text = ((int)(obj.document_tone.tones[i].score * 100)).ToString() + " %";
                     else if (obj.document_tone.tones[i].tone_id == "joy")
-                        bunifuCircleProgressbar_happy.Value = (int)(obj.document_tone.tones[i].score * 100);
+                        label_happy.Text = ((int)(obj.document_tone.tones[i].score * 100)).ToString() + " %";
                     else if (obj.document_tone.tones[i].tone_id == "fear")
-                        bunifuCircleProgressbar_fear.Value = (int)(obj.document_tone.tones[i].score * 100);
+                        label_fear.Text = ((int)(obj.document_tone.tones[i].score * 100)).ToString() + " %";
                     else if (obj.document_tone.tones[i].tone_id == "disgust")
-                        bunifuCircleProgressbar_disgust.Value = (int)(obj.document_tone.tones[i].score * 100);
+                        label_disgust.Text = ((int)(obj.document_tone.tones[i].score * 100)).ToString() + " %";
                     else if (obj.document_tone.tones[i].tone_id == "anger")
-                        bunifuCircleProgressbar_anger.Value = (int)(obj.document_tone.tones[i].score * 100);
+                        label_angry.Text = ((int)(obj.document_tone.tones[i].score * 100)).ToString() + " %";
 
                     else if (obj.document_tone.tones[i].tone_id == "confident")
-                        bunifuCircleProgressbar_confidence.Value = (int)(obj.document_tone.tones[i].score * 100);
+                        label_sad.Text = ((int)(obj.document_tone.tones[i].score * 100)).ToString() + " %";
+
                 }
                 Form1.outputText = text;
             }
@@ -117,14 +118,12 @@ namespace SpeechToText
                     a[i] = a[i] / obj.sentences_tone.Length;
                 }
 
-
-                bunifuCircleProgressbar_happy.Value = a[0];
-                bunifuCircleProgressbar_anger.Value = a[1];
-                bunifuCircleProgressbar_sad.Value = a[2];
-                bunifuCircleProgressbar_disgust.Value = a[3];
-                bunifuCircleProgressbar_fear.Value = a[4];
-                bunifuCircleProgressbar_confidence.Value = a[5];
-
+                label_happy.Text = a[0].ToString() + " %";
+                label_angry.Text = a[1].ToString() + " %";
+                label_sad.Text = a[2].ToString() + " %";
+                label_disgust.Text = a[3].ToString() + " %";
+                label_fear.Text = a[4].ToString() + " %";
+                label_confidence.Text = a[5].ToString() + " %";              
 
                 Form1.outputText = text;
             }
